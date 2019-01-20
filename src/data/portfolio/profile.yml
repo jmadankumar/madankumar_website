@@ -1,0 +1,109 @@
+--- 
+biography: |
+    Hey I'm passionate full stack developer. I develop rich websites,
+            cross-platform desktop and mobile apps using web technologies.
+            Currently I'm exploring my self around ReactJS and NodeJS.
+company: "L&T infotech"
+country: "Mumbai, India,"
+name: "Madan Kumar"
+role: "Full Stack Developer"
+skills: 
+  - 
+    skills: 
+      - Javascript
+      - Java
+      - NodeJS
+    type: Languages
+  - 
+    skills: 
+      - MySQL
+      - MSSQL
+      - MongoDB
+    type: Databases
+  - 
+    skills: 
+      - "VS Code"
+      - Eclipse
+      - Intellij
+    type: IDE
+  - 
+    skills: 
+      - Cordovo
+      - Ionic
+      - Android
+      - "React Native"
+    type: Mobile
+  - 
+    skills: 
+      - ReactJS
+      - Angular
+      - VueJS
+    type: "FrontEnd Frameworks"
+  - 
+    skills: 
+      - Express
+      - Spring
+      - "Spring Boot"
+    type: "BackEnd Frameworks"
+  - 
+    skills: 
+      - HTML
+      - CSS
+      - bootstrap
+    type: UI
+  - 
+    skills: 
+      - JHipster
+    type: "Rapid Application Development"
+  - 
+    skills: 
+      - Webpack
+      - Gradle
+      - Gulp
+    type: "Build Tools"
+  - 
+    skills: 
+      - Illustrator
+    type: "Graphic Design"
+  - 
+    skills: 
+      - Git
+      - SVN
+    type: "Version Control"
+  - 
+    skills: 
+      - AWS
+      - Firebase
+    type: Cloud
+  - 
+    skills: 
+      - "Google Analytics"
+    type: Analytics
+  - 
+    skills: 
+      - Mocha
+      - Chai
+      - JUnit
+      - Jest
+    type: Testing
+  - 
+    skills: 
+      - Sequelize
+      - Mongoose
+    type: Libraries
+  - 
+    skills: 
+      - npm
+      - yarn
+      - gradle
+    type: "Package Manager"
+  - 
+    skills: 
+      - WebSocket
+      - IndexedDB
+      - Thymleaf
+      - MyBatis
+      - "SAML Secuity"
+      - "Service Worker"
+      - TypeScript
+    type: Others

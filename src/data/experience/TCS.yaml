@@ -1,0 +1,194 @@
+--- 
+- 
+  company: "Tata Consultancy Services"
+  description: "Full Stack Developer For all CRM Application"
+  duration: 
+    endDate: "2018-08-14"
+    startDate: "2016-06-22"
+  location: "Chennai, India"
+  name: "CRM Applications For Scoot Airlines"
+  roles: 
+    - "Requirement Analysis"
+    - "Impact Analysis"
+    - "Full Stack Development"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - "Angular JS"
+    - NodeJs
+    - "Rest API"
+    - "Spring Boot"
+    - Spring
+    - "Spring Data JPA"
+    - Hiberate
+    - Git
+    - NPM
+    - JHipster
+    - Gulp
+    - Gradle
+    - J2EE
+    - JAVA
+    - Tomcat
+    - HTML
+    - CSS
+    - JS
+    - Yeoman
+    - MySQL
+    - Liquibase
+    - Thymeleaf
+    - Bootstrap
+    - AWS
+    - "SAML SSO"
+    - "MS SQL"
+    - MyBatis
+  year: 2016
+- 
+  company: "Tata Consultancy Services"
+  description: |
+      Migration of Weaver Details from Excel to NoSql Database.
+      Future Weaver Details will be maintained by Weave Data Web App. 
+      Worked on data migration and web app development
+  duration: 
+    endDate: "2015-10-30"
+    startDate: "2015-08-01"
+  location: "Chennai, India"
+  name: "Weaver Data Migration"
+  roles: 
+    - "Requirement Analysis"
+    - "Full Stack Development"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - HTML
+    - CSS
+    - JS
+    - JQuery
+    - J2EE
+    - JAVA
+    - Tomcat
+    - MongoDB
+    - JDBC
+    - "Rest API"
+    - SVN
+  year: 2016
+- 
+  company: "Tata Consultancy Services"
+  description: |
+      Weave web App is used by Traditonal Weavers of India to sell their hand made product and designs online. 
+      I worked as full stack developer.
+  duration: 
+    endDate: "2016-06-03"
+    startDate: "2015-11-12"
+  location: "Chennai, India"
+  name: "Weave Web App"
+  roles: 
+    - "Requirement Analysis"
+    - "Full Stack Development"
+  technologies: 
+    - HTML
+    - CSS
+    - JS
+    - WebSocket
+    - JQuery
+    - J2EE
+    - Tomcat
+    - MySQL
+    - JDBC
+    - Hibernate
+    - SVN
+  year: 2015
+- 
+  company: "Tata Consultancy Services"
+  description: "Weave Mobile App is used by Traditonal Weavers of India to sell their hand made product and designs online. I worked on end to end process of app development using hybrid technologies.'\n"
+  duration: 
+    endDate: "2016-06-03"
+    startDate: "2015-05-02"
+  location: "Chennai, India"
+  name: "Weave Mobile App"
+  roles: 
+    - "Requirement Analysis"
+    - "Mobile App Development"
+    - UX
+    - "Field Study with Weavers"
+    - "Manual Testing"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - "Angular JS"
+    - HTML
+    - CSS
+    - JS
+    - "REST API"
+    - JQuery
+    - Ionic
+    - Canvas
+    - SVN
+  year: 2015
+- 
+  company: "Tata Consultancy Services"
+  description: |
+      It is Single player Hybrid Mobile Game which is used by Open Ignite Team of TCS to recruit BSC graduate. 
+      Candidate are recruited based on their game analytical skill.
+  duration: 
+    endDate: "2015-04-30"
+    startDate: "2015-01-05"
+  location: "Chennai, India"
+  name: "Knighty King"
+  roles: 
+    - "Gathering Ideas for Game"
+    - "Game Prototype Development"
+    - "Game Logic"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - HTML
+    - CSS
+    - JS
+    - JQuery
+    - Cordova
+    - SVN
+  year: 2015
+- 
+  company: "Tata Consultancy Services"
+  description: |
+      Combinatorial Games consists of 5 two player games which is used by Open Ignite Team of TCS to recruit BSC graduate. 
+      Candidate are recruited based on their game analytical skill. I contributed to all stages of the application development.
+  duration: 
+    endDate: "2014-12-30"
+    startDate: "2014-08-01"
+  location: "Chennai, India"
+  name: "Combinatorial Games"
+  roles: 
+    - "Gathering Ideas for Game"
+    - "Game Prototype Development"
+    - "Full Stack Development"
+    - "WebSocket Implemention for Two player Game"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - HTML
+    - CSS
+    - JS
+    - WebSocket
+    - JQuery
+    - J2EE
+    - JAVA
+    - Tomcat
+    - MySQL
+    - JDBC
+    - SVN
+  year: 2014
+- 
+  company: Freelance
+  description: "Spider Net is Internet Service Provider operating at Dharavi,Mumbai. Spider Net required a website to show their Service plans to thier customers. It is static website developed entirely by Me.\n"
+  duration: 
+    endDate: "2013-10-31"
+    startDate: "2013-10-01"
+  location: "Mumbai, India"
+  roles: 
+    - "Front End Development"
+    - "UI Prototype Development"
+  name: "Spider Net"
+  technologies: 
+    - HTML
+    - CSS
+    - JS
+    - Bootstrap
+    - JQuery
+    - SVN
+  year: 2013

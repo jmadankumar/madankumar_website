@@ -1,0 +1,84 @@
+.portfolio-wrapper{
+    .header{
+        position: relative;
+        background: url('../images/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;       
+
+        .profile-basic-container{
+            display: flex;
+            flex-direction: row;            
+            justify-content: center;
+            padding: 90px 30px;
+            position: relative;
+            .profile-image{
+                width: 70px;
+                height: 70px;
+            }
+           
+            .basic-detail{
+                color:#ffffff;
+                padding: 10px;
+            }
+             @media (min-width:750px) {
+                .profile-image{
+                    width: 100px;
+                    height: 100px;
+                }
+                .basic-detail{
+                    padding: 10px 20px;
+                    h4{
+                           font-size: 2.2rem;
+                    }
+                    h6{
+                           font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .header:before{
+        background-color: rgba(12, 52, 75, 0.7);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+    .content{
+        width: 90%;
+        margin: 0px auto;
+        margin-top:-100px;
+        position: relative;
+        margin-bottom: 30px;
+        .card{
+            padding: 10px;
+        }
+    }
+    @media (min-width:750px){
+        .header{
+            height: 350px;
+        }
+        .content{
+            width: 80%;
+            margin-top:-120px;
+        }
+    }
+    .section-holder{
+        border-bottom: 1px solid #cccccc;
+        margin-top: 10px;
+        .section-title{
+            font-family: bold;
+        }
+        .section-content{
+            color:#546673;
+            .skill-wrapper{
+                padding: 5px 0px;
+            }
+        }
+    }
+    .section-holder:last-child{
+        border-bottom:none;
+    }
+}

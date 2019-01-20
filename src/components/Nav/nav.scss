@@ -1,0 +1,88 @@
+.mk-navbar{
+    background: #ffffff;
+    border-top: 1px solid #cccccc;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    .nav-container{
+        width: 100%;
+        margin:0px auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav{flex: 1;}
+    .brand{
+        padding: 5px;
+        line-height: 50px;
+        display: none;
+        .brand-image{
+            width: 50px;
+            height: 50px;
+        }
+        .brand-name{
+            font-size:  24px;
+            color: #0c344b;
+            margin-left: 20px;
+        }
+    }
+    
+    .nav-item{
+        padding: 5px;
+        color:#9E9E9E;
+        font-size: 14px;
+        flex: 1 1 auto;
+        .nav-link{
+            padding: 0.1rem 0.7rem;
+            color:#9E9E9E;
+            display: flex;
+            flex-direction: column;       
+            align-items: center;
+        }
+    }
+    .nav-item.active{
+        color: #0c344b;
+        .nav-link{
+            color: #0c344b;
+        }
+    }
+    .nav-item:hover {
+        color: #0c344b;
+        .nav-link{
+            color: #0c344b;
+        }
+    }
+}
+@media (min-width:"750px"){
+    .mk-navbar{
+        top:0;
+        bottom: auto;
+        justify-content: center;
+        border-bottom: 1px solid #cccccc;
+        border-top-width: 0px;
+        .nav-container{
+            width: 80%;
+        }
+        .nav{
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: row;
+        }
+        .brand{
+            display: flex;  
+        }
+        .nav-item{
+            flex: none;
+            padding: 10px;
+            line-height: 30px; 
+            .nav-link{
+                flex-direction: row;
+                justify-content: center;
+                svg{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
