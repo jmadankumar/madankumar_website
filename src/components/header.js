@@ -1,7 +1,8 @@
 import {  } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import ProfileImage from '../images/new_profile.jpg';
+import ProfileImage from '../images/new_profile.webp';
+
 const Header = ({ siteTitle }) => (
   <div className="header-bar">
     <div className="header-container">

@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Nav from './Nav';
 import '../scss/global.scss';
 import './layout.css';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const Layout = ({ children, name, showHeader }) => (
   <StaticQuery

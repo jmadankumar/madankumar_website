@@ -3,6 +3,8 @@ import { StaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Project from '../components/Project';
+import '../scss/experience.scss';
+
 class ExperiencePage extends Component {
     render() {
         return (
@@ -37,7 +39,7 @@ class ExperiencePage extends Component {
                                 <h2>Experience</h2>
                                 {
                                     projects.map(project => {
-                                        return (<Project data={project}/>);
+                                        return (<Project data={project} />);
                                     })
                                 }
                             </div>

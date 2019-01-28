@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as FeatherIcon from 'react-feather';
 import './nav.scss';
-import ProfileImage from '../../images/new_profile.jpg';
+import ProfileImage from '../../images/new_profile.webp';
 const iconSize = 20;
 const navLinks = [{
     name: 'Porfolio',

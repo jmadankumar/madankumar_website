@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo';
 import '../scss/index.scss';
-import ProfileImage from '../images/new_profile.jpg';
+import ProfileImage from '../images/new_profile.webp';
 
 const IndexPage = () => (
   <StaticQuery query={
@@ -75,7 +75,7 @@ const IndexPage = () => (
                             <h6>{skill.type}</h6>
                             {
                               skill.skills.map((_skill) => {
-                                return (<span className="badge badge-light">{_skill}</span>);
+                                return (<span className="badge badge-light" key={_skill}>{_skill}</span>);
                               })
                             }
                           </div>
