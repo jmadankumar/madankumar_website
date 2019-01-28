@@ -12,7 +12,7 @@ class Post extends Component {
         const { showImage, image, author, date, tags, description, showIcon, title, to, showContent, content } = this.props;
         return (
             <div className="card post" onClick={() => this.navigate(to)}>
-                {showImage && (<div className="card-image-top">
+                {showImage && (<div className="card-image-top image">
                     <img src={image} />
                 </div>)}
                 <div className="card-body">
