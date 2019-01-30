@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as FeatherIcon from 'react-feather';
 import './nav.scss';
 import ProfileImage from '../../images/new_profile.webp';
-const iconSize = 20;
 const navLinks = [{
     name: 'Porfolio',
     icon: FeatherIcon.User,
@@ -46,7 +45,7 @@ class Nav extends Component {
             <div className="mk-navbar">
                 <div className="nav-container">
                     <div className="brand">
-                        <img src={ProfileImage} className="brand-image rounded-circle" />
+                        <img src={ProfileImage} className="brand-image rounded-circle" alt="profile"/>
                         <span className="brand-name">Madan Kumar</span>
                     </div>
                     <ul className="nav">

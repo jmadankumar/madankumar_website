@@ -1,8 +1,12 @@
-.card{
-    margin-bottom: 1rem;
-}
+
 .blog-page{
-    padding: 1rem 1rem;
+    padding: 10px;
+    .card{
+        margin-bottom: 10px;
+    }
+    .card:first-child{
+        margin-top: 10px;
+    }
 }
 .card-image-top img{
     width: 100%;
@@ -18,6 +22,7 @@
 @media (min-width:750px){
     .blog-page{
         width: 80%;
+        padding: 1rem 1rem;
         margin: 0px auto;
     }
 }

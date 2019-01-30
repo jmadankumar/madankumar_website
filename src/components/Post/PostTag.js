@@ -9,7 +9,7 @@ const PostTag = ({ title, color }) => {
 
     return (
         <span className={`badge badge-${_color} tag`}>
-            #{title}
+            # {title}
         </span>
     );
 }

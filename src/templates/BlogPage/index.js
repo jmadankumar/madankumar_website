@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import * as FeatherIcon from 'react-feather';
 import SEO from '../../components/seo';
@@ -28,14 +28,14 @@ export default class BlogPage extends Component {
     render() {
         const { data, pageContext } = this.props;
         const posts = data.allMarkdownRemark.edges;
+        const site = data.site;
         const { oldPost, newPost } = pageContext;
-
+        console.log(site.siteMetadata.url);
         return (
             <Layout name={"Blog"} showHeader={true}>
                 <SEO title={"Blog"} keywords={["Blog", "Madan Kumar", "Javascript", "gatsby"]} />
 
                 <div className="blog-page">
-                    <h3>Blog</h3>
                     {posts.map(({ node }) => {
                         const post = node;
                         let image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.fixed.src : '';
@@ -44,8 +44,9 @@ export default class BlogPage extends Component {
                                 showImage={!!post.frontmatter.image}
                                 image={image}
                                 date={post.frontmatter.date} tags={post.frontmatter.tags}
-                                showIcon={true} key={post.id}
-                                showContent={false} to={post.frontmatter.path}/>
+                                showIcon={false} key={post.id}
+                                showContent={false} to={post.frontmatter.path} id={post.frontmatter.id}
+                                url={site.siteMetadata.url} />
                         );
                     })}
                     <div className="clearfix">
@@ -65,6 +66,11 @@ BlogPage.propTypes = {
 
 export const pageQuery = graphql`
 query blogListQuery($skip: Int!, $limit: Int!) {
+    site{
+        siteMetadata{
+            url
+        }
+    },
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit

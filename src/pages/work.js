@@ -27,9 +27,9 @@ class WorkPage extends Component {
                   }
               }
               `} render={(data) => {
-                    let projects = data.allTcsYaml.edges.map(edge => {
-                        return edge.node;
-                    });
+                    // let projects = data.allTcsYaml.edges.map(edge => {
+                    //     return edge.node;
+                    // });
                     return (
                         <Layout name="Work" showHeader={true}>
                             <SEO title="Work" keywords={["Madan Kumar", "Work Experience", "Full Stack Developer", "Javascript"]} />

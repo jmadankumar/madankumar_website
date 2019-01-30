@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
-
+import {  StaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo';
 import '../scss/index.scss';
 import ProfileImage from '../images/new_profile.webp';
@@ -37,7 +35,7 @@ const IndexPage = () => (
             <div className="header">
               <div className="profile-basic-container">
                 <div className="pic-holder">
-                  <img src={ProfileImage} className="profile-image rounded-circle" />
+                  <img src={ProfileImage} className="profile-image rounded-circle" alt="profile" />
                 </div>
                 <div className="basic-detail">
                   <h3 className="name">{profile.name}</h3>
@@ -67,7 +65,7 @@ const IndexPage = () => (
                 </section>
                 <section className="section-holder">
                   <h5 className="section-title">Skills</h5>
-                  <p className="section-content">
+                  <div className="section-content">
                     {
                       profile.skills.map((skill) => {
                         return (
@@ -82,7 +80,7 @@ const IndexPage = () => (
                         );
                       })
                     }
-                  </p>
+                  </div>
                 </section>
               </div>
             </div>

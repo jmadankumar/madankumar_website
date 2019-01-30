@@ -25,10 +25,13 @@ class Footer extends Component {
         </div>
         <div className="social-links">
           {socialConnects.map(socialConnect => {
-            return (<a target="_blank" className="social-media" href={socialConnect.href} key={socialConnect.name}>
-              <socialConnect.icon size={20} />
-              {/* <span>{socialConnect.name}</span> */}
-            </a>);
+            return (
+              <a target="_blank" rel="noopener noreferrer" className="social-media"
+                href={socialConnect.href} key={socialConnect.name}>
+                <socialConnect.icon size={20} />
+                {/* <span>{socialConnect.name}</span> */}
+              </a>
+            );
           })}
         </div>
       </footer>

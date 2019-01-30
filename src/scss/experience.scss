@@ -1,6 +1,8 @@
 .experience-page{
-    padding: 1rem 1rem;
    
+   .project-card-wrapper:first-child{
+        margin-top:20px;
+   }
     .card{
         margin-bottom: 20px;
     }
@@ -8,6 +10,7 @@
 @media (min-width:750px){
     .experience-page{
         width: 80%;
+        padding: 1rem 1rem;
         margin: 0px auto;
     }
 }

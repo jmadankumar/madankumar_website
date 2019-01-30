@@ -36,7 +36,6 @@ class ExperiencePage extends Component {
                         <Layout name="Experience" showHeader={true}>
                             <SEO title="Experience" keywords={["Madan Kumar", "Work Experience", "Full Stack Developer", "Javascript"]} />
                             <div className="experience-page">
-                                <h2>Experience</h2>
                                 {
                                     projects.map(project => {
                                         return (<Project data={project} />);

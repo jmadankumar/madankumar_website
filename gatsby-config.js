@@ -3,6 +3,7 @@ module.exports = {
     title: `Madan Kumar`,
     description: `Personal Portfolio and Blog of Madan Kumar.`,
     author: `@madan`,
+    url: 'http://madankumar.js.org'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
