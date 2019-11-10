@@ -43,7 +43,7 @@
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "copy": "copyfiles .nojekyll ./public && copyfiles CNAME ./public",
-    "deploy": "gatsby build && npm run copy && gh-pages -d public -b master --remote https://github.com/jmadankumar/jmadankumar.github.io.git",
+    "deploy": "gatsby build && npm run copy && gh-pages -d public -b master -r https://github.com/jmadankumar/jmadankumar.github.io.git",
     "glist":"gh-pages --help"
   },
   "devDependencies": {
