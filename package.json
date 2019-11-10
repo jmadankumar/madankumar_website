@@ -42,10 +42,12 @@
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "copy": "cp .nojekyll ./public && cp CNAME ./public",
-    "deploy": "gatsby build && npm run copy && gh-pages -d public -b master"
+    "copy": "copyfiles .nojekyll ./public && copyfiles CNAME ./public",
+    "deploy": "gatsby build && npm run copy && gh-pages -d public -b master --remote https://github.com/jmadankumar/jmadankumar.github.io.git",
+    "glist":"gh-pages --help"
   },
   "devDependencies": {
+    "copyfiles": "^2.1.1",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.2"
