@@ -1,10 +1,10 @@
 --- 
 biography: |
-    Hey I'm passionate full stack developer. I develop rich websites,
+    Hey I'm passionate full stack developer. I develop webapps,
             cross-platform desktop and mobile apps using web technologies.
-            Currently I'm exploring my self around ReactJS and NodeJS.
-company: "L&T infotech"
-country: "Mumbai, India,"
+            Currently I'm exploring myself around ReactJS and NodeJS.
+company: "Larsen & Toubro Infotech Limited"
+country: "Mumbai, India"
 name: "Madan Kumar"
 role: "Full Stack Developer"
 skills: 
@@ -17,7 +17,6 @@ skills:
   - 
     skills: 
       - MySQL
-      - MSSQL
       - MongoDB
     type: Databases
   - 
@@ -37,7 +36,6 @@ skills:
     skills: 
       - ReactJS
       - Angular
-      - VueJS
     type: "FrontEnd Frameworks"
   - 
     skills: 
@@ -49,7 +47,7 @@ skills:
     skills: 
       - HTML
       - CSS
-      - bootstrap
+      - Bootstrap
     type: UI
   - 
     skills: 
@@ -99,6 +97,7 @@ skills:
     type: "Package Manager"
   - 
     skills: 
+      - ElectronJS
       - WebSocket
       - IndexedDB
       - Thymleaf

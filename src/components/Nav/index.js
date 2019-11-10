@@ -3,18 +3,18 @@ import * as FeatherIcon from 'react-feather';
 import './nav.scss';
 import ProfileImage from '../../images/new_profile.webp';
 const navLinks = [{
-    name: 'Porfolio',
-    icon: FeatherIcon.User,
-    href: "/"
-}, {
+    //     name: 'Porfolio',
+    //     icon: FeatherIcon.User,
+    //     href: "/"
+    // }, {
     name: 'Experience',
     icon: FeatherIcon.Layers,
     href: "/experience"
 }, {
-    name: 'Work',
-    icon: FeatherIcon.Grid,
-    href: "/work"
-}, {
+    //     name: 'Work',
+    //     icon: FeatherIcon.Grid,
+    //     href: "/work"
+    // }, {
     name: 'Blog',
     icon: FeatherIcon.Feather,
     href: "/blog"
@@ -27,7 +27,8 @@ class NavItem extends Component {
             <li className={"nav-item " + (isActive ? "active" : "")} >
                 <a className="nav-link" href={href}>
                     <Icon size={20} />
-                    {name}</a>
+                    {name}
+                </a>
             </li>
         );
     }
@@ -44,10 +45,10 @@ class Nav extends Component {
         return (
             <div className="mk-navbar">
                 <div className="nav-container">
-                    <div className="brand">
-                        <img src={ProfileImage} className="brand-image rounded-circle" alt="profile"/>
+                    <a className="nav-link" href="/" className="brand">
+                        <img src={ProfileImage} className="brand-image rounded-circle" alt="profile" />
                         <span className="brand-name">Madan Kumar</span>
-                    </div>
+                    </a>
                     <ul className="nav">
                         {
                             navLinks.map(navlink => {

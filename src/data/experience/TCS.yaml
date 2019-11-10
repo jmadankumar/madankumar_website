@@ -1,4 +1,26 @@
 --- 
+-
+  company: "Larsen & Toubro Infotech Limited"
+  description: "Full Stack Developer"
+  duration: 
+    endDate: "present"
+    startDate: "2018-08-21"
+  location: "Chennai, India"
+  name: "Convo Alert (Alert System)"
+  roles: 
+    - "Requirement Analysis"
+    - "Impact Analysis"
+    - "Full Stack Development"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - "React"
+    - "ElectronJS"
+    - "NodeJS"
+    - "Spring"
+    - "Spring Boot"
+    - "Java"
+    - "AWS - S3, SNS"
+    - "Git"
 - 
   company: "Tata Consultancy Services"
   description: "Full Stack Developer For all CRM Application"

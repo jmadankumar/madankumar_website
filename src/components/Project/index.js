@@ -10,8 +10,8 @@ class Project extends Component {
                 <div className="duration">
                     <span className="badge badge-primary">
                         <span className="date">{format(data.duration.startDate, 'DD MMM , YYYY')} </span>
-                        <FeatherIcon.Activity size={16} color="#fff"/>
-                        <span className="date">{format(data.duration.endDate, 'DD MMM , YYYY')}</span>
+                        <FeatherIcon.Activity size={16} color="#fff" />
+                        <span className="date">{data.duration.endDate !== 'present' ? format(data.duration.endDate, 'DD MMM , YYYY'):'present'}</span>
                     </span>
                 </div>
                 <div className="card">
