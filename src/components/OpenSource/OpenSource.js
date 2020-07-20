@@ -7,12 +7,7 @@ const OpenSource = () => {
 
   const fetchRepo = async () => {
     const { data } = await axios.get(
-      ' https://api.github.com/users/jmadankumar/repos?type=public',
-      {
-        headers: {
-          Authorization: `token 56902243bc17c310a8ccc050a1fc39b831805e2e`,
-        },
-      }
+      ' https://api.github.com/users/jmadankumar/repos?type=public'
     );
     data.sort((repo1, repo2) => {
       return new Date(repo1.created_at) < new Date(repo2.created_at) ? 1 : -1;
@@ -42,7 +37,6 @@ const OpenSource = () => {
                     <span className="mr-4" title="forks">
                       📌 {repo.forks_count}
                     </span>
-                    
                   </div>
                 </div>
               </Card>
