@@ -17,18 +17,19 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <div className="copy-right">&copy; Copy right {format(today, 'YYYY')}</div>
+        <div className="copy-right">&copy; Copy right {format(today, 'yyyy')}</div>
         <div className="made-with">
           <span >Made with </span>
-          <FeatherIcon.Heart size={20} color="red" />
-          <span className="author">by Madan Kumar</span>
+          <FeatherIcon.Heart size={20} color="red" className="inline-block"/>
+          by
+          <a href="https://github.com/jmadankumar"><span className="author"> Madan Kumar</span></a>
         </div>
-        <div className="social-links">
+        <div className="social-links flex justify-center">
           {socialConnects.map(socialConnect => {
             return (
               <a target="_blank" rel="noopener noreferrer" className="social-media"
                 href={socialConnect.href} key={socialConnect.name}>
-                <socialConnect.icon size={20} />
+                <socialConnect.icon size={20} className="inline-block"/>
                 {/* <span>{socialConnect.name}</span> */}
               </a>
             );

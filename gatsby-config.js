@@ -3,7 +3,7 @@ module.exports = {
     title: `Madan Kumar`,
     description: `Personal Portfolio and Blog of Madan Kumar.`,
     author: `@madan`,
-    url: 'http://madankumar.js.org'
+    url: 'http://madankumar.js.org',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,6 +30,7 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-transformer-yaml',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -39,13 +40,13 @@ module.exports = {
             options: {
               maxWidth: 750,
               linkImagesToOriginal: false,
-              wrapperStyle: 'margin-bottom: 1.0725rem;'
-            }
+              wrapperStyle: 'margin-bottom: 1.0725rem;',
+            },
           },
           'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files'
-        ]
-      }
+          'gatsby-remark-copy-linked-files',
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -60,20 +61,21 @@ module.exports = {
         name: `experience`,
         path: `${__dirname}/src/data/experience/`,
       },
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/src/data/posts`
-      }
+        path: `${__dirname}/src/data/posts`,
+      },
     },
     'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-111245218-1",
-      }
-    }
+        trackingId: 'UA-111245218-1',
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

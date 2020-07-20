@@ -44,12 +44,12 @@ class Nav extends Component {
         const { currentLinkName } = this.props;
         return (
             <div className="mk-navbar">
-                <div className="nav-container">
+                <div className="flex justify-between">
                     <a className="nav-link" href="/" className="brand">
-                        <img src={ProfileImage} className="brand-image rounded-circle" alt="profile" />
+                        <img src={ProfileImage} className="brand-image rounded-full" alt="profile" />
                         <span className="brand-name">Madan Kumar</span>
                     </a>
-                    <ul className="nav">
+                    <ul className="flex justify-around flex-grow md:flex-grow-0">
                         {
                             navLinks.map(navlink => {
                                 return (<NavItem name={navlink.name} href={navlink.href}

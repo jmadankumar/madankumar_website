@@ -1,93 +1,65 @@
-import React from 'react'
-import {  StaticQuery, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 import SEO from '../components/seo';
 import '../scss/index.scss';
-import ProfileImage from '../images/new_profile.webp';
+import SkillsByCategory from '../components/SkillsByCatergory';
+import ProfileSection from '../components/ProfileSection/ProfileSection';
+import ProfileHeader from '../components/ProfileHeader';
+import ProfileBiography from '../components/ProfileBiography';
+import OpenSource from '../components/OpenSource/OpenSource';
+import Card from '../components/common/Card';
 
-const IndexPage = () => (
-  <StaticQuery query={
-    graphql`
-  {
-    allPortfolioYaml{
-      edges{
-        node{
-          name,
-          role,
-          biography,
-          company,
-          country,
-          skills{
-            type,
-            skills
+const IndexPage = ({ data }) => {
+  const profile = data.allPortfolioJson.edges[0].node;
+  return (
+    <Layout name="Porfolio">
+      <SEO
+        title="Portfolio"
+        keywords={[`madankumar`, `portfolio`, `full stack developer`]}
+      />
+      <div className="portfolio-wrapper">
+        <ProfileHeader profile={profile} />
+        <div className="content">
+          <Card className="px-6 md:px-16">
+            <ProfileSection title="Biography">
+              <ProfileBiography />
+            </ProfileSection>
+            <ProfileSection title="Company">{profile.company}</ProfileSection>
+            <ProfileSection title="Country">{profile.country}</ProfileSection>
+            <ProfileSection title="Skills">
+              <SkillsByCategory data={profile.skillsByCategory} />
+            </ProfileSection>
+            <ProfileSection title="Open Source">
+              <OpenSource/>
+            </ProfileSection>
+          </Card>
+        </div>
+      </div>
+      <div></div>
+    </Layout>
+  );
+};
+export const query = graphql`
+  query PortfolioQuery {
+    allPortfolioJson {
+      edges {
+        node {
+          biography
+          company
+          country
+          name
+          role
+          skillsByCategory {
+            category
+            skills {
+              badge
+              title
+            }
           }
         }
       }
     }
   }
-  `} render={(data) => {
-      console.log(data);
-      const profile = data.allPortfolioYaml.edges[0].node;
-      return (
-        <Layout name="Porfolio">
-          <SEO title="Portfolio" keywords={[`madankumar`, `portfolio`, `full stack developer`]} />
-          <div className="portfolio-wrapper">
-            <div className="header">
-              <div className="profile-basic-container">
-                <div className="pic-holder">
-                  <img src={ProfileImage} className="profile-image rounded-circle" alt="profile" />
-                </div>
-                <div className="basic-detail">
-                  <h3 className="name">{profile.name}</h3>
-                  <h5 className="profession">{profile.role}</h5>
-                </div>
-              </div>
-            </div>
-            <div className="content">
-              <div className="card">
-                <section className="section-holder">
-                  <h5 className="section-title">Biography</h5>
-                  <p className="section-content">
-                    {profile.biography}
-                  </p>
-                </section>
-                <section className="section-holder">
-                  <h5 className="section-title">Company</h5>
-                  <p className="section-content">
-                    {profile.company}
-                  </p>
-                </section>
-                <section className="section-holder">
-                  <h5 className="section-title">Country</h5>
-                  <p className="section-content">
-                    {profile.country}
-                  </p>
-                </section>
-                <section className="section-holder">
-                  <h5 className="section-title">Skills</h5>
-                  <div className="section-content">
-                    {
-                      profile.skills.map((skill) => {
-                        return (
-                          <div className="skill-wrapper">
-                            <h6>{skill.type}</h6>
-                            {
-                              skill.skills.map((_skill) => {
-                                return (<span className="badge badge-light" key={_skill}>{_skill}</span>);
-                              })
-                            }
-                          </div>
-                        );
-                      })
-                    }
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>         
-        </Layout>
-      );
-    }} />
-)
-
-export default IndexPage
+`;
+export default IndexPage;

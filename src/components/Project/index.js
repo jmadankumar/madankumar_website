@@ -1,52 +1,37 @@
 import React, { Component } from 'react';
-import { format } from 'date-fns';
+import { format, parse } from 'date-fns';
 import * as FeatherIcon from 'react-feather';
 import './project.scss';
+import { DATE_FORMAT } from '../../config/constants';
+import ProjectCard from './ProjectCard';
 class Project extends Component {
-    render() {
-        const { data } = this.props;
-        return (
-            <div className="project-card-wrapper">
-                <div className="duration">
-                    <span className="badge badge-primary">
-                        <span className="date">{format(data.duration.startDate, 'DD MMM , YYYY')} </span>
-                        <FeatherIcon.Activity size={16} color="#fff" />
-                        <span className="date">{data.duration.endDate !== 'present' ? format(data.duration.endDate, 'DD MMM , YYYY'):'present'}</span>
-                    </span>
-                </div>
-                <div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">{data.name}</h5>
-                        <h6 className="card-subtitle mb-2">{data.company}</h6>
-                        <p className="card-text text-muted">{data.description}</p>
-                        <div className="location">
-                            <FeatherIcon.MapPin size={16} />
-                            <span> {data.location}</span>
-                        </div>
-                        <div className="responsibility">
-                            <h5>Responsibility</h5>
-                            {
-                                data.roles.map(role => {
-                                    return (
-                                        <div className="item">
-                                            <FeatherIcon.GitCommit size={16} /> {role}
-                                        </div>
-                                    );
-                                })}
-                        </div>
-                        <div className="technology">
-                            <h5>Technologies</h5>
-                            {
-                                data.technologies.map(technology => {
-                                    return (<span className="badge badge-light">{technology}</span>);
-                                })
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+  render() {
+    const { data } = this.props;
+    return (
+      <div className="project-card-wrapper">
+        <div className="duration mb-4">
+          <span className="badge badge-primary">
+            <span className="date">
+              {format(
+                parse(data.duration.startDate, 'yyyy-MM-dd', new Date()),
+                DATE_FORMAT
+              )}{' '}
+            </span>
+            <FeatherIcon.Activity size={16} color="#fff" className="inline-block"/>
+            <span className="date">
+              {data.duration.endDate !== 'present'
+                ? format(
+                    parse(data.duration.endDate, 'yyyy-MM-dd', new Date()),
+                    DATE_FORMAT
+                  )
+                : 'present'}
+            </span>
+          </span>
+        </div>
+        <ProjectCard data={data} />
+      </div>
+    );
+  }
 }
 
 export default Project;

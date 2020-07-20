@@ -1,11 +1,38 @@
---- 
+---
 -
   company: "Larsen & Toubro Infotech Limited"
   description: "Full Stack Developer"
   duration: 
     endDate: "present"
+    startDate: "2020-02-01"
+  location: "Mumbai, India"
+  name: "Convo Link (VRS)"
+  roles: 
+    - "Requirement Analysis"
+    - "Task planning"
+    - "Code review"
+    - "Git Repo maintenance"
+    - "Impact Analysis"
+    - "Full Stack Development"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - "React"
+    - "Typescript"
+    - "NodeJS"
+    - "WebRTC"
+    - "Websocket"
+    - "Media Web API"
+    - "NPM"
+    - "Yarn"
+    - "AWS - S3, SNS"
+    - "Git"
+-
+  company: "Larsen & Toubro Infotech Limited"
+  description: "Full Stack Developer"
+  duration: 
+    endDate: "2020-01-31"
     startDate: "2018-08-21"
-  location: "Chennai, India"
+  location: "Mumbai, India"
   name: "Convo Alert (Alert System)"
   roles: 
     - "Requirement Analysis"

@@ -12,7 +12,7 @@ skills:
     skills: 
       - Javascript
       - Java
-      - NodeJS
+      - Node.JS
     type: Languages
   - 
     skills: 
@@ -21,7 +21,7 @@ skills:
     type: Databases
   - 
     skills: 
-      - "VS Code"
+      - "vscode"
       - Eclipse
       - Intellij
     type: IDE
@@ -45,8 +45,8 @@ skills:
     type: "BackEnd Frameworks"
   - 
     skills: 
-      - HTML
-      - CSS
+      - HTML5
+      - CSS3
       - Bootstrap
     type: UI
   - 
