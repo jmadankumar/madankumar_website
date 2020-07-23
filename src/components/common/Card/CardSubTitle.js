@@ -5,8 +5,8 @@ import cx from 'classnames';
 const CardSubTitle = ({ children, className, ...props }) => {
     return (
         <Typography
-            variant="h5"
-            className={cx('text-gray-600', className)}
+            variant="h6"
+            className={cx('text-gray-600 font-normal', className)}
             {...props}
         >
             {children}

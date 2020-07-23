@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as FeatherIcon from 'react-feather';
 import { format } from 'date-fns';
+import { Link } from 'gatsby';
 import './footer.scss';
 
 let today = Date.now();
@@ -22,7 +23,7 @@ class Footer extends Component {
           <span >Made with </span>
           <FeatherIcon.Heart size={20} color="red" className="inline-block"/>
           by
-          <a href="https://github.com/jmadankumar"><span className="author"> Madan Kumar</span></a>
+          <Link href="https://github.com/jmadankumar"><span className="author"> Madan Kumar</span></Link>
         </div>
         <div className="social-links flex justify-center">
           {socialConnects.map(socialConnect => {

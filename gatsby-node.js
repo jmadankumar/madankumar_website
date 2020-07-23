@@ -8,6 +8,7 @@
 const path = require('path');
 const PostTemplate = path.resolve('./src/templates/PostPage/index.js');
 const BlogTemplate = path.resolve('./src/templates/BlogPage/index.js');
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 

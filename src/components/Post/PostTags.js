@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostTag from './PostTag';
+import Badge from '../common/Badge';
 
-const PostTags = ({ tags }) => {   
+const PostTags = ({ tags }) => {
     return (
-        <div className="">
-            {tags.map(tag => <PostTag title={tag} key={tag}/>)}
+        <div className="mb-2">
+            {tags.map((tag) => (
+                <Badge key={tag}>#{tag}</Badge>
+            ))}
         </div>
     );
-}
+};
 
 PostTags.propTypes = {
-    tags: PropTypes.array.isRequired
-}
+    tags: PropTypes.array.isRequired,
+};
 
 export default PostTags;

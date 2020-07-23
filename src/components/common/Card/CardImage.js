@@ -3,10 +3,15 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 const CardImage = ({ src, background, className, ...props }) => {
+    const commonClassName = 'w-full rounded-t-md rounded-r-md';
     if (background) {
         return (
             <div
-                className={cx('bg-cover bg-no-repeat bg-center w-full', className)}
+                className={cx(
+                    'bg-cover bg-no-repeat bg-center ',
+                    commonClassName,
+                    className
+                )}
                 style={{
                     backgroundImage: `url(${src})`,
                 }}
@@ -15,7 +20,7 @@ const CardImage = ({ src, background, className, ...props }) => {
             </div>
         );
     }
-    return <img {...props} src={src} className={cx('w-full', className)} />;
+    return <img {...props} src={src} className={cx(commonClassName, className)} />;
 };
 
 CardImage.propTypes = {

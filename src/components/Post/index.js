@@ -10,84 +10,82 @@ import Card, {
     CardSubTitle,
 } from '../common/Card';
 import { CommentCount } from 'disqus-react';
+import Typography from '../common/Typography';
+import { Link } from 'gatsby';
 
-class Post extends Component {
-    navigate(to) {
-        window.location.href = to;
+const Post = ({
+    frontmatter,
+    isPreview,
+    content,
+    to,
+    url = 'http://localhost:8000',
+}) => {
+    const { title, description, image, date, tags, id, author } = frontmatter;
+    const imageUrl = image ? image.childImageSharp.fixed.src : '';
+
+    const disqusConfig = {
+        identifier: id,
+        title: title,
+        url: `${url}${to}`,
+    };
+
+    const disqusShortname = 'http-madankumar-js-org';
+
+    if (process.env.NODE_ENV === 'development') {
+        url = 'http://localhost:8000';
     }
-    render() {
-        console.log(process.env.NODE_ENV);
-        let {
-            showImage,
-            image,
-            author,
-            date,
-            tags,
-            description,
-            showIcon,
-            title,
-            to,
-            showContent,
-            content,
-            id,
-            url,
-        } = this.props;
-        const disqusShortname = 'http-madankumar-js-org';
-        if (process.env.NODE_ENV === 'development') {
-            url = 'http://localhost:8000';
-        }
-        const disqusConfig = {
-            identifier: id,
-            title: title,
-            url: `${url}${to}`,
-        };
-        return (
-            <Card className="card post" onClick={() => this.navigate(to)}>
-                {showImage && <CardImage src={image} alt="post cover" background className="h-64"/>}
+    return (
+        <Link href={to}>
+            <Card className="card post mb-5">
+                <CardImage
+                    src={imageUrl}
+                    alt="post cover"
+                    background
+                    className="h-64"
+                />
                 <CardBody>
-                    <CardTitle>{title}</CardTitle>
-                    <CardSubTitle className="mb-2">
+                    <CardTitle className="mb-2">{title}</CardTitle>
+                    <CardSubTitle className="mb-2">{description}</CardSubTitle>
+                    <p className="mb-2">
                         Posted By
-                        <PostAuthor author={author} showIcon={showIcon} />
+                        <PostAuthor author={author} showIcon={false} />
                         On
-                        <PostDate date={date} showIcon={showIcon} />
-                    </CardSubTitle>
-                    <PostTags tags={tags ?? []} />
-                    {showContent && (
+                        <PostDate date={date} showIcon={false} />
+                    </p>
+                    <PostTags tags={tags ?? []} className="mb-2" />
+                    {isPreview && (
                         <div
                             dangerouslySetInnerHTML={{ __html: content }}
                         ></div>
                     )}
-                    {!showContent && (
-                        <h6 className="comments">
+                    {!isPreview && (
+                        <Typography variant="h6" className="comments">
                             <CommentCount
                                 shortname={disqusShortname}
                                 config={disqusConfig}
                             >
                                 0 Comments
                             </CommentCount>
-                        </h6>
+                        </Typography>
                     )}
                 </CardBody>
             </Card>
-        );
-    }
-}
-
+        </Link>
+    );
+};
 Post.propTypes = {
-    showImage: PropTypes.bool,
-    image: PropTypes.string,
-    author: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    tags: PropTypes.array,
-    showIcon: PropTypes.bool,
-    description: PropTypes.string,
-    title: PropTypes.string,
-    to: PropTypes.string,
-    showContent: PropTypes.bool,
+    frontmatter: {
+        image: PropTypes.object,
+        author: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        tags: PropTypes.array,
+        description: PropTypes.string,
+        title: PropTypes.string,
+        id: PropTypes.string,
+    },
     content: PropTypes.string,
-    id: PropTypes.string,
     url: PropTypes.string,
+    to: PropTypes.string,
 };
 
 Post.defaultProps = {

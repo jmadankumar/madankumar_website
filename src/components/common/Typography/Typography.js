@@ -7,7 +7,7 @@ const styles = {
     h3: 'text-2xl font-bold m-0',
     h4: 'text-xl font-bold m-0',
     h5: 'text-lg font-bold m-0',
-    h6: 'text-base font-bold m-0',
+    h6: 'text-base font-normal m-0',
     p: 'text-base m-0',
 };
 const Typography = ({ variant, children, className }) => {
