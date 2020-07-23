@@ -61,6 +61,7 @@ export default class BlogPage extends Component {
                                 id={post.frontmatter.id}
                                 url={site.siteMetadata.url}
                                 to={post.frontmatter.path}
+                                isPreview
                             />
                         );
                     })}

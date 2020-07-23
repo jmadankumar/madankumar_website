@@ -12,6 +12,10 @@ import Card, {
 import { CommentCount } from 'disqus-react';
 import Typography from '../common/Typography';
 import { Link } from 'gatsby';
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+
+const shortcodes = { Link };
 
 const Post = ({
     frontmatter,
@@ -53,12 +57,12 @@ const Post = ({
                         <PostDate date={date} showIcon={false} />
                     </p>
                     <PostTags tags={tags ?? []} className="mb-2" />
-                    {isPreview && (
-                        <div
-                            dangerouslySetInnerHTML={{ __html: content }}
-                        ></div>
-                    )}
                     {!isPreview && (
+                        <MDXProvider components={shortcodes}>
+                            <MDXRenderer>{content}</MDXRenderer>
+                        </MDXProvider>
+                    )}
+                    {isPreview && (
                         <Typography variant="h6" className="comments">
                             <CommentCount
                                 shortname={disqusShortname}

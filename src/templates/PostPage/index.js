@@ -10,6 +10,7 @@ import BreadCrumb from '../../components/common/BreadCrumb';
 export default class PostPage extends Component {
     render() {
         const { post, site } = this.props.data;
+        console.log(post);
         const disqusShortname = 'http-madankumar-js-org';
         const disqusConfig = {
             identifier: post.frontmatter.id,
@@ -31,12 +32,14 @@ export default class PostPage extends Component {
                         ]}
                         className="mb-5"
                     />
+
                     <Post
                         frontmatter={post.frontmatter}
                         key={post.id}
-                        content={post.html}
+                        content={post.body}
                         id={post.frontmatter.id}
                         url={site.siteMetadata.url}
+                        isPreview={false}
                     />
                     <div className="post-comments">
                         <DiscussionEmbed
@@ -74,7 +77,8 @@ export const pageQuery = graphql`
                     }
                 }
             }
-            html
+            id
+            body
         }
     }
 `;
