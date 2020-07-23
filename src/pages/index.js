@@ -8,58 +8,66 @@ import ProfileSection from '../components/ProfileSection/ProfileSection';
 import ProfileHeader from '../components/ProfileHeader';
 import ProfileBiography from '../components/ProfileBiography';
 import OpenSource from '../components/OpenSource/OpenSource';
-import Card from '../components/common/Card';
+import Card, { CardBody } from '../components/common/Card';
 
 const IndexPage = ({ data }) => {
-  const profile = data.allPortfolioJson.edges[0].node;
-  return (
-    <Layout name="Porfolio">
-      <SEO
-        title="Portfolio"
-        keywords={[`madankumar`, `portfolio`, `full stack developer`]}
-      />
-      <div className="portfolio-wrapper">
-        <ProfileHeader profile={profile} />
-        <div className="content">
-          <Card className="px-6 md:px-16">
-            <ProfileSection title="Biography">
-              <ProfileBiography />
-            </ProfileSection>
-            <ProfileSection title="Company">{profile.company}</ProfileSection>
-            <ProfileSection title="Country">{profile.country}</ProfileSection>
-            <ProfileSection title="Skills">
-              <SkillsByCategory data={profile.skillsByCategory} />
-            </ProfileSection>
-            <ProfileSection title="Open Source">
-              <OpenSource/>
-            </ProfileSection>
-          </Card>
-        </div>
-      </div>
-      <div></div>
-    </Layout>
-  );
+    const profile = data.allPortfolioJson.edges[0].node;
+    return (
+        <Layout name="Porfolio">
+            <SEO
+                title="Portfolio"
+                keywords={[`madankumar`, `portfolio`, `full stack developer`]}
+            />
+            <div className="portfolio-wrapper">
+                <ProfileHeader profile={profile} />
+                <div className="content">
+                    <Card>
+                        <CardBody className="px-6 md:px-16">
+                            <ProfileSection title="Biography">
+                                <ProfileBiography />
+                            </ProfileSection>
+                            <ProfileSection title="Company">
+                                {profile.company}
+                            </ProfileSection>
+                            <ProfileSection title="Country">
+                                {profile.country}
+                            </ProfileSection>
+                            <ProfileSection title="Skills">
+                                <SkillsByCategory
+                                    data={profile.skillsByCategory}
+                                />
+                            </ProfileSection>
+                            <ProfileSection title="Open Source">
+                                <OpenSource />
+                            </ProfileSection>
+                        </CardBody>
+                    </Card>
+                </div>
+            </div>
+            <div></div>
+        </Layout>
+    );
 };
 export const query = graphql`
-  query PortfolioQuery {
-    allPortfolioJson {
-      edges {
-        node {
-          biography
-          company
-          country
-          name
-          role
-          skillsByCategory {
-            category
-            skills {
-              badge
-              title
+    query PortfolioQuery {
+        allPortfolioJson {
+            edges {
+                node {
+                    biography
+                    company
+                    country
+                    name
+                    role
+                    skillsByCategory {
+                        category
+                        skills {
+                            badge
+                            title
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 `;
 export default IndexPage;

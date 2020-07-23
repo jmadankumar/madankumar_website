@@ -1,0 +1,19 @@
+---
+title: Hello, world!
+path: /blog/read-file-javascript
+date: 2019-01-29
+author: Madan Kumar
+tags:
+  - madan
+  - jumar
+image: ../../images/gatsby-astronaut.png
+---
+
+import Layout from '../../components/Layout';
+
+# hello
+
+<h1>{props.pageContext.frontmatter.title}</h1>
+<span>{props.pageContext.frontmatter.author}</span>
+
+export default ({ children }) => <Layout showHeader>{children}</Layout>;

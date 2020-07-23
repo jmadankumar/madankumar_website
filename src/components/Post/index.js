@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import PostAuthor from './PostAuthor';
 import PostDate from './PostDate';
 import PostTags from './PostTags';
+import Card, {
+    CardBody,
+    CardImage,
+    CardTitle,
+    CardSubTitle,
+} from '../common/Card';
 import { CommentCount } from 'disqus-react';
 
 class Post extends Component {
@@ -11,42 +17,60 @@ class Post extends Component {
     }
     render() {
         console.log(process.env.NODE_ENV);
-        let { showImage, image, author, date, tags, description, showIcon, title, to, showContent, content, id, url } = this.props;
-        const disqusShortname = "http-madankumar-js-org";
+        let {
+            showImage,
+            image,
+            author,
+            date,
+            tags,
+            description,
+            showIcon,
+            title,
+            to,
+            showContent,
+            content,
+            id,
+            url,
+        } = this.props;
+        const disqusShortname = 'http-madankumar-js-org';
         if (process.env.NODE_ENV === 'development') {
-            url = 'http://localhost:8000'
+            url = 'http://localhost:8000';
         }
         const disqusConfig = {
             identifier: id,
             title: title,
-            url: `${url}${to}`
+            url: `${url}${to}`,
         };
         return (
-            <div className="card post" onClick={() => this.navigate(to)}>
-                {showImage && (<div className="card-image-top image">
-                    <img src={image} alt="post cover" />
-                </div>)}
-                <div className="card-body">
-                    <h3 className="card-title">
-                        {title}
-                    </h3>
-                    <h6 className="card-subtitle mb-2 text-muted">
+            <Card className="card post" onClick={() => this.navigate(to)}>
+                {showImage && <CardImage src={image} alt="post cover" background className="h-64"/>}
+                <CardBody>
+                    <CardTitle>{title}</CardTitle>
+                    <CardSubTitle className="mb-2">
                         Posted By
                         <PostAuthor author={author} showIcon={showIcon} />
                         On
                         <PostDate date={date} showIcon={showIcon} />
-                    </h6>
-                    <PostTags tags={tags} />
-                    {showContent && <div dangerouslySetInnerHTML={{ __html: content }}></div>}
+                    </CardSubTitle>
+                    <PostTags tags={tags ?? []} />
+                    {showContent && (
+                        <div
+                            dangerouslySetInnerHTML={{ __html: content }}
+                        ></div>
+                    )}
                     {!showContent && (
                         <h6 className="comments">
-                            <CommentCount  shortname={disqusShortname} config={disqusConfig}>
+                            <CommentCount
+                                shortname={disqusShortname}
+                                config={disqusConfig}
+                            >
                                 0 Comments
                             </CommentCount>
                         </h6>
                     )}
-                </div>
-            </div>);
+                </CardBody>
+            </Card>
+        );
     }
 }
 
@@ -63,13 +87,13 @@ Post.propTypes = {
     showContent: PropTypes.bool,
     content: PropTypes.string,
     id: PropTypes.string,
-    url: PropTypes.string
+    url: PropTypes.string,
 };
 
 Post.defaultProps = {
     showImage: false,
     image: '',
-    showIcon: false
-}
+    showIcon: false,
+};
 
 export default Post;

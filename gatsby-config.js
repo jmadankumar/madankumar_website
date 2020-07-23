@@ -66,7 +66,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/src/data/posts`,
+        path: `${__dirname}/src/data/blog`,
       },
     },
     'gatsby-plugin-catch-links',
@@ -76,8 +76,9 @@ module.exports = {
         trackingId: 'UA-111245218-1',
       },
     },
+    'gatsby-plugin-mdx',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};

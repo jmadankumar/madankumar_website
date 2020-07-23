@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Madan Kumar <kumarmadan.j@gmail.com>",
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.14",
+    "@mdx-js/react": "^1.6.14",
     "@octokit/rest": "^18.0.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
@@ -16,6 +18,7 @@
     "gatsby-plugin-catch-links": "^2.3.11",
     "gatsby-plugin-google-analytics": "^2.3.11",
     "gatsby-plugin-manifest": "2.4.18",
+    "gatsby-plugin-mdx": "^1.2.28",
     "gatsby-plugin-offline": "^3.2.18",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
@@ -49,7 +52,8 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "copy": "copyfiles .nojekyll ./public && copyfiles CNAME ./public",
     "deploy": "gatsby build && npm run copy && gh-pages -d public -b master -r https://github.com/jmadankumar/jmadankumar.github.io.git",
-    "glist": "gh-pages --help"
+    "glist": "gh-pages --help",
+    "clean": "gatsby clean"
   },
   "devDependencies": {
     "copyfiles": "^2.3.0",
