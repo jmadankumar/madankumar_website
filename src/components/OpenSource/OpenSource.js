@@ -8,7 +8,7 @@ const OpenSource = () => {
 
     const fetchRepo = async () => {
         const { data } = await axios.get(
-            ' https://api.github.com/users/jmadankumar/repos?type=public'
+            'https://api.github.com/users/jmadankumar/repos?type=public'
         );
         data.sort((repo1, repo2) => {
             return new Date(repo1.created_at) < new Date(repo2.created_at)

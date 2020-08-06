@@ -12,10 +12,19 @@ import Card, {
 import { CommentCount } from 'disqus-react';
 import Typography from '../common/Typography';
 import { Link } from 'gatsby';
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-const shortcodes = { Link };
+const shortcodes = {
+    Link,
+    h1: (props) => <Typography {...props} variant="h1" />,
+    h2: (props) => <Typography {...props} variant="h2" />,
+    h3: (props) => <Typography {...props} variant="h3" />,
+    h4: (props) => <Typography {...props} variant="h4" />,
+    h5: (props) => <Typography {...props} variant="h5" />,
+    h6: (props) => <Typography {...props} variant="h6" />,
+    p: (props) => <Typography {...props} variant="p" />,
+};
 
 const Post = ({
     frontmatter,
@@ -58,9 +67,11 @@ const Post = ({
                     </p>
                     <PostTags tags={tags ?? []} className="mb-2" />
                     {!isPreview && (
-                        <MDXProvider components={shortcodes}>
-                            <MDXRenderer>{content}</MDXRenderer>
-                        </MDXProvider>
+                        <div className="mb-2">
+                            <MDXProvider components={shortcodes}>
+                                <MDXRenderer>{content}</MDXRenderer>
+                            </MDXProvider>
+                        </div>
                     )}
                     {isPreview && (
                         <Typography variant="h6" className="comments">

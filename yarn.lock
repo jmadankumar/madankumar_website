@@ -11951,6 +11951,11 @@ prism-github@^1.1.0:
   resolved "https://registry.yarnpkg.com/prism-github/-/prism-github-1.1.0.tgz#301bf05d4f58ff6fad63f3a4d26c9b3581c9fec8"
   integrity sha1-MBvwXU9Y/2+tY/Ok0mybNYHJ/sg=
 
+prism-themes@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/prism-themes/-/prism-themes-1.4.0.tgz#2f93a33450532577c7962928655d7b4305fa843d"
+  integrity sha512-VTy6t69sS1FavspBsodoF/x/eduPydUXyZH+++Jkun0VQ4X7lCZVvsfGsYKzkUan2PJNcV2mA4lAFcr7KKXD1g==
+
 prismjs@^1.20.0:
   version "1.20.0"
   resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.20.0.tgz#9b685fc480a3514ee7198eac6a3bf5024319ff03"
