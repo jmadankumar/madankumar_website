@@ -23,6 +23,7 @@ export default class PostPage extends Component {
                     title={post.frontmatter.title}
                     description={post.frontmatter.description}
                     keywords={post.frontmatter.tags}
+                    image={post.frontmatter?.image?.childImageSharp?.fixed?.src}
                 />
                 <div className="post-page">
                     <BreadCrumb
@@ -30,7 +31,7 @@ export default class PostPage extends Component {
                             { title: 'Blog', href: '/blog' },
                             { title: post.frontmatter.title },
                         ]}
-                        className="mb-5"
+                        className="mb-2 p-2"
                     />
 
                     <Post
@@ -71,7 +72,7 @@ export const pageQuery = graphql`
                 author
                 image {
                     childImageSharp {
-                        fixed(width: 500) {
+                        fixed(width: 1000) {
                             src
                         }
                     }

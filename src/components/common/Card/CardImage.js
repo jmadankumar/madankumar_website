@@ -3,7 +3,7 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 const CardImage = ({ src, background, className, ...props }) => {
-    const commonClassName = 'w-full rounded-t-md rounded-r-md';
+    const commonClassName = 'w-full';
     if (background) {
         return (
             <div

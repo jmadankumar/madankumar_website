@@ -14,16 +14,22 @@ import Typography from '../common/Typography';
 import { Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import styled from '@emotion/styled';
 
+const Wrapper = styled.div`
+    .card-image {
+        height: auto;
+    }
+`;
 const shortcodes = {
     Link,
-    h1: (props) => <Typography {...props} variant="h1" />,
-    h2: (props) => <Typography {...props} variant="h2" />,
-    h3: (props) => <Typography {...props} variant="h3" />,
-    h4: (props) => <Typography {...props} variant="h4" />,
-    h5: (props) => <Typography {...props} variant="h5" />,
-    h6: (props) => <Typography {...props} variant="h6" />,
-    p: (props) => <Typography {...props} variant="p" />,
+    h1: (props) => <Typography {...props} variant="h1" className="mb-2" />,
+    h2: (props) => <Typography {...props} variant="h2" className="mb-2" />,
+    h3: (props) => <Typography {...props} variant="h3" className="mb-2" />,
+    h4: (props) => <Typography {...props} variant="h4" className="mb-2" />,
+    h5: (props) => <Typography {...props} variant="h5" className="mb-2" />,
+    h6: (props) => <Typography {...props} variant="h6" className="mb-2" />,
+    p: (props) => <Typography {...props} variant="p" className="mb-2" />,
 };
 
 const Post = ({
@@ -48,44 +54,53 @@ const Post = ({
         url = 'http://localhost:8000';
     }
     return (
-        <Link href={to}>
-            <Card className="card post mb-5">
-                <CardImage
-                    src={imageUrl}
-                    alt="post cover"
-                    background
-                    className="h-64"
-                />
-                <CardBody>
-                    <CardTitle className="mb-2">{title}</CardTitle>
-                    <CardSubTitle className="mb-2">{description}</CardSubTitle>
-                    <p className="mb-2">
-                        Posted By
-                        <PostAuthor author={author} showIcon={false} />
-                        On
-                        <PostDate date={date} showIcon={false} />
-                    </p>
-                    <PostTags tags={tags ?? []} className="mb-2" />
-                    {!isPreview && (
-                        <div className="mb-2">
-                            <MDXProvider components={shortcodes}>
-                                <MDXRenderer>{content}</MDXRenderer>
-                            </MDXProvider>
-                        </div>
+        <Wrapper>
+            <Link href={to}>
+                <Card className="card post mb-5">
+                    {imageUrl && (
+                        <CardImage
+                            src={imageUrl}
+                            alt="post cover"
+                            background={false}
+                            className="card-image"
+                        />
                     )}
-                    {isPreview && (
-                        <Typography variant="h6" className="comments">
-                            <CommentCount
-                                shortname={disqusShortname}
-                                config={disqusConfig}
-                            >
-                                0 Comments
-                            </CommentCount>
-                        </Typography>
-                    )}
-                </CardBody>
-            </Card>
-        </Link>
+                    <CardBody className="p-6">
+                        {isPreview && (
+                            <CardTitle className="mb-2">{title}</CardTitle>
+                        )}
+                        <CardSubTitle className="mb-2">
+                            {description}
+                        </CardSubTitle>
+                        {!isPreview && (
+                            <div className="mb-4">
+                                <MDXProvider components={shortcodes}>
+                                    <MDXRenderer>{content}</MDXRenderer>
+                                </MDXProvider>
+                            </div>
+                        )}
+                        <p className="mb-4">
+                            Posted By
+                            <PostAuthor author={author} showIcon={false} />
+                            On
+                            <PostDate date={date} showIcon={false} />
+                        </p>
+                        <PostTags tags={tags ?? []} className="mb-4" />
+
+                        {isPreview && (
+                            <Typography variant="h6" className="comments">
+                                <CommentCount
+                                    shortname={disqusShortname}
+                                    config={disqusConfig}
+                                >
+                                    0 Comments
+                                </CommentCount>
+                            </Typography>
+                        )}
+                    </CardBody>
+                </Card>
+            </Link>
+        </Wrapper>
     );
 };
 Post.propTypes = {

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Badge from '../common/Badge';
 
-const PostTags = ({ tags }) => {
+const PostTags = ({ tags, className }) => {
     return (
-        <div className="mb-2">
+        <div className={className}>
             {tags.map((tag) => (
                 <Badge key={tag}>#{tag}</Badge>
             ))}
