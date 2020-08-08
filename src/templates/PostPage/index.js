@@ -4,8 +4,10 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Post from '../../components/Post';
 import './post.scss';
-import { DiscussionEmbed, CommentCount } from 'disqus-react';
+import loadable from '@loadable/component';
 import BreadCrumb from '../../components/common/BreadCrumb';
+
+const PostComments = loadable(() => import('../../components/PostComments'));
 
 export default class PostPage extends Component {
     render() {
@@ -43,7 +45,7 @@ export default class PostPage extends Component {
                         isPreview={false}
                     />
                     <div className="post-comments">
-                        <DiscussionEmbed
+                        <PostComments
                             shortname={disqusShortname}
                             config={disqusConfig}
                         />

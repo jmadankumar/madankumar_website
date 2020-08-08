@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@loadable/component": "^5.13.1",
     "@mdx-js/mdx": "^1.6.14",
     "@mdx-js/react": "^1.6.14",
     "@octokit/rest": "^18.0.1",

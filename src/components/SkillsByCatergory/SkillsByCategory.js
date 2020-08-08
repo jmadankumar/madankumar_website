@@ -3,7 +3,7 @@ import React from 'react';
 const SkillBadge = ({ skill }) => {
   return (
     <div className="skill-badge mr-2 mb-3" key={skill.title}>
-      <img src={skill.badge}/>
+      <img src={skill.badge} alt={skill.title}/>
     </div>
   );
 };
