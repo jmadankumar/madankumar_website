@@ -14,7 +14,7 @@ const ProjectCard = ({ data }) => {
                     <span> {data.location}</span>
                 </div>
                 <div className="responsibility border-b">
-                    <h5 className="text-lg">Responsibility</h5>
+                    <h5 className="text-lg mb-2">Responsibility</h5>
                     {data.roles.map((role) => {
                         return (
                             <div className="item">
@@ -28,7 +28,7 @@ const ProjectCard = ({ data }) => {
                     })}
                 </div>
                 <div className="technology">
-                    <h5 className="text-lg">Technologies</h5>
+                    <h5 className="text-lg mb-2">Technologies</h5>
                     <div className="flex flex-wrap">
                         {data.technologies.map((technology) => {
                             return (

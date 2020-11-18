@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -7,8 +7,10 @@ import SkillsByCategory from '../components/SkillsByCatergory';
 import ProfileSection from '../components/ProfileSection/ProfileSection';
 import ProfileHeader from '../components/ProfileHeader';
 import ProfileBiography from '../components/ProfileBiography';
-import OpenSource from '../components/OpenSource/OpenSource';
+import PersonalOpenSource from '../components/PersonalOpenSource';
 import Card, { CardBody } from '../components/common/Card';
+import PersonalProject from '../components/PersonalProject';
+import CommunityOpenSource from '../components/CommunityOpenSource';
 
 const IndexPage = ({ data }) => {
     const profile = data.allPortfolioJson.edges[0].node;
@@ -26,19 +28,25 @@ const IndexPage = ({ data }) => {
                             <ProfileSection title="Biography">
                                 <ProfileBiography />
                             </ProfileSection>
-                            <ProfileSection title="Company">
+                            {/* <ProfileSection title="Company">
                                 {profile.company}
                             </ProfileSection>
                             <ProfileSection title="Country">
                                 {profile.country}
-                            </ProfileSection>
+                            </ProfileSection> */}
                             <ProfileSection title="Skills">
                                 <SkillsByCategory
                                     data={profile.skillsByCategory}
                                 />
                             </ProfileSection>
-                            <ProfileSection title="Open Source">
-                                <OpenSource />
+                            <ProfileSection title="Personal projects">
+                               <PersonalProject/>
+                            </ProfileSection>
+                            <ProfileSection title="Community Open Source contribution">
+                            <CommunityOpenSource />
+                            </ProfileSection>
+                            <ProfileSection title="Personal Open Source contribution">
+                                <PersonalOpenSource />
                             </ProfileSection>
                         </CardBody>
                     </Card>

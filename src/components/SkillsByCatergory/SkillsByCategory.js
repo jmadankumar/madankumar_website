@@ -9,11 +9,11 @@ const SkillBadge = ({ skill }) => {
 };
 const SkillsByCategory = ({ data }) => {
   return (
-    <>
+    <div className="flex flex-wrap -mx-4">
       {data.map((skillCategory) => {
         return (
-          <div className="skill-wrapper">
-            <h6 className="mb-2">{skillCategory.category}</h6>
+          <div className="w-full lg:w-1/3 skill-wrapper px-4 mb-4"> 
+            <h6 className="underline mb-2 font-medium tracking-wide">{skillCategory.category}</h6>
             <div className="flex flex-wrap">
               {skillCategory.skills.map((skill) => (
                 <SkillBadge skill={skill} />
@@ -22,7 +22,7 @@ const SkillsByCategory = ({ data }) => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

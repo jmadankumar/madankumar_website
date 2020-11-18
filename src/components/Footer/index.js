@@ -20,8 +20,8 @@ class Footer extends Component {
       <footer>
         <div className="copy-right">&copy; Copy right {format(today, 'yyyy')}</div>
         <div className="made-with">
-          <span >Made with </span>
-          <FeatherIcon.Heart size={20} color="red" className="inline-block"/>
+          <span >Made with</span>
+          <FeatherIcon.Heart size={20} color="red" className="inline-block mx-2"/>
           by
           <Link href="https://github.com/jmadankumar"><span className="author"> Madan Kumar</span></Link>
         </div>
