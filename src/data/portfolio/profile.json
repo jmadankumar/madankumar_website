@@ -3,7 +3,7 @@
   "company": "Larsen & Toubro Infotech Limited",
   "country": "Mumbai, India",
   "name": "Madan Kumar",
-  "role": "Full Stack Developer",
+  "role": "Full stack web developer",
   "skillsByCategory": [
     {
       "category": "Languages",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "category": "FrontEnd Frameworks",
+      "category": "Frontend Frameworks",
       "skills": [
         {
           "title": "ReactJS",
@@ -64,13 +64,12 @@
         }
       ]
     },
-
     {
-      "category": "BackEnd Frameworks",
+      "category": "Backend Frameworks",
       "skills": [
         {
           "title": "Express",
-          "badge": "https://img.shields.io/badge/-Express-1a202c?style=for-the-badge&logo=Expressjs&logoColor=ffffff"
+          "badge": "https://img.shields.io/badge/-Express%20JS-007ACC?style=for-the-badge&logo=Express&logoColor=ffffff"
         },
         {
           "title": "Spring",
@@ -79,15 +78,18 @@
         {
           "title": "Spring Boot",
           "badge": "https://img.shields.io/badge/-SpringBoot-6DB33F?style=for-the-badge&logo=Spring&logoColor=ffffff"
+        }, {
+          "title": "NestJS",
+          "badge": "https://img.shields.io/badge/-NestJS-red?style=for-the-badge&logo=NestJS&logoColor=ffffff"
         }
       ]
     },
     {
-      "category": "Databases",
+      "category": "Database",
       "skills": [
         {
           "title": "MySQL",
-          "badge": "https://img.shields.io/badge/-MySQL-1a202c?style=for-the-badge&logo=MySQL&logoColor=ffffff"
+          "badge": "https://img.shields.io/badge/-MySQL-007ACC?style=for-the-badge&logo=MySQL&logoColor=yellow"
         },
         {
           "title": "MongoDB",
@@ -129,7 +131,6 @@
         }
       ]
     },
-
     {
       "category": "Rapid Application Development",
       "skills": [
@@ -191,6 +192,9 @@
         {
           "title": "Digital Ocean",
           "badge": "https://img.shields.io/badge/-Digital%20Ocean-1a202c?style=for-the-badge&logo=DigitalOcean"
+        },{
+          "title": "Netlify",
+          "badge": "https://img.shields.io/badge/-Netlify-00CEBF?style=for-the-badge&logo=Netlify&logoColor=ffffff"
         }
       ]
     },
@@ -238,15 +242,32 @@
       ]
     },
     {
+      "category": "ORM",
+      "skills": [
+        {
+          "title": "TypeORM",
+          "badge": "https://img.shields.io/badge/-TypeORM-15C213?style=for-the-badge&logo=typeorm"
+        },
+        {
+          "title": "Hibernate",
+          "badge": "https://img.shields.io/badge/-Hibernate-1a202c?style=for-the-badge&logo=hiberbate"
+        },
+        {
+          "title": "Spring JPA",
+          "badge": "https://img.shields.io/badge/-Spring%20JPA-1a202c?style=for-the-badge&logo=spring"
+        }
+      ]
+    },
+    {
       "category": "Others",
       "skills": [
         {
           "title": "ElectronJS",
-          "badge": "https://img.shields.io/badge/-ElectronJS-1a202c?style=for-the-badge&logo=Electron&logoColor=ffffff"
+          "badge": "https://img.shields.io/badge/-Electron%20JS-1a202c?style=for-the-badge&logo=Electron&logoColor=ffffff"
         },
         {
           "title": "WebSocket",
-          "badge": "https://img.shields.io/badge/-WebSocket-1a202c?style=for-the-badge&logo=WebSocket"
+          "badge": "https://img.shields.io/badge/-WebSocket-15C213?style=for-the-badge&logo=WebSocket"
         },
         {
           "title": "WebRTC",
@@ -254,7 +275,7 @@
         },
         {
           "title": "IndexedDB",
-          "badge": "https://img.shields.io/badge/-IndexedDB-1a202c?style=for-the-badge&logo=IndexedDB"
+          "badge": "https://img.shields.io/badge/-Indexed%20DB-red?style=for-the-badge&logo=IndexedDB"
         },
         {
           "title": "Thymleaf",
@@ -271,7 +292,7 @@
       ]
     },
     {
-      "category": "Expolring",
+      "category": "Exploring",
       "skills": [
         {
           "title": "Python",
@@ -283,7 +304,7 @@
         },
         {
           "title": "Flutter",
-          "badge": "https://img.shields.io/badge/-Flutter-1a202c?style=for-the-badge&logo=Flutter"
+          "badge": "https://img.shields.io/badge/-Flutter-007ACC?style=for-the-badge&logo=Flutter"
         }
       ]
     }

@@ -11,7 +11,7 @@ const OpenSource = () => {
             'https://api.github.com/users/jmadankumar/repos?type=public'
         );
         data.sort((repo1, repo2) => {
-            return new Date(repo1.created_at) < new Date(repo2.created_at)
+            return new Date(repo1.updated_at) < new Date(repo2.updated_at)
                 ? 1
                 : -1;
         });
@@ -24,12 +24,12 @@ const OpenSource = () => {
     }, []);
 
     return (
-        <div className="flex flex-wrap -mx-4">
+        <div className="flex flex-wrap -mx-2">
             {repos.map((repo) => {
                 return (
                     <div className="px-2 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 mb-4">
                         <a href={repo.html_url} target="_blank">
-                            <Card className="border rounded-none hover:shadow-lg">
+                            <Card className="border rounded-none transition transform duration-500 ease-in-out hover:shadow-lg hover:scale-110">
                                 <CardBody className="card-body">
                                     <Typography variant="h4" className="mb-2">
                                         {repo.name}

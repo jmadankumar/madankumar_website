@@ -14,6 +14,7 @@
     - "Git Repo maintenance"
     - "Impact Analysis"
     - "Full Stack Development"
+    - "Release planning and implemention"
     - "Maintenance and Delivery of the product"
   technologies: 
     - "React"
@@ -21,11 +22,15 @@
     - "NodeJS"
     - "WebRTC"
     - "Websocket"
-    - "Media Web API"
+    - "Web Media API"
+    - "Notification API"
     - "NPM"
     - "Yarn"
-    - "AWS - S3, SNS"
+    - "AWS - S3, SNS, Cloudfront"
     - "Git"
+    - Sentry
+    - Material UI
+    - Webpack
 -
   company: "Larsen & Toubro Infotech Limited"
   description: "Full Stack Developer"
@@ -36,8 +41,10 @@
   name: "Convo Alert (Alert System)"
   roles: 
     - "Requirement Analysis"
-    - "Impact Analysis"
+    - "Code review"
+    - "Release planning and implemention"
     - "Full Stack Development"
+    - "Impact Analysis"
     - "Maintenance and Delivery of the product"
   technologies: 
     - "React"
