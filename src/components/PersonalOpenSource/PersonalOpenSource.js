@@ -29,7 +29,7 @@ const OpenSource = () => {
                 return (
                     <div className="px-2 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 mb-4">
                         <a href={repo.html_url} target="_blank">
-                            <Card className="border rounded-none transition transform duration-500 ease-in-out hover:shadow-lg hover:scale-110">
+                            <Card className="border rounded-none transition transform duration-500 ease-in-out hover:shadow hover:scale-105">
                                 <CardBody className="card-body">
                                     <Typography variant="h4" className="mb-2">
                                         {repo.name}

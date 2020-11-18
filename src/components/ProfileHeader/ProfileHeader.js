@@ -6,7 +6,7 @@ const ProfileHeader = ({ profile }) => {
     return (
         <div className="header">
             <div className="profile-basic-container flex flex-wrap  items-center">
-                <div className="w-full text-center mb-5">
+                <div className="w-full text-center mt-12 mb-5">
                     <img
                         src={ProfileImage}
                         className="profile-image rounded-full m-auto shadow"
