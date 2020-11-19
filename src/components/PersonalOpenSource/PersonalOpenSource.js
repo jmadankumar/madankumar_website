@@ -34,7 +34,7 @@ const OpenSource = () => {
                                     <Typography variant="h4" className="mb-2">
                                         {repo.name}
                                     </Typography>
-                                    <Typography variant="p" className="mb-2">
+                                    <Typography variant="p" className="text-gray-600 mb-2">
                                         {repo.description}
                                     </Typography>
                                     <div className="flex justify-start">

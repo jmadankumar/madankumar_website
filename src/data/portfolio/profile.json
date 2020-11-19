@@ -217,10 +217,6 @@
         {
           "title": "React testing library",
           "badge": "https://img.shields.io/badge/-React%20testing%20library-1a202c?style=for-the-badge&logo=test"
-        },
-        {
-          "title": "Enzyme",
-          "badge": "https://img.shields.io/badge/-Enzyme-%231a202c?style=for-the-badge&logo=Enzyme"
         }
       ]
     },

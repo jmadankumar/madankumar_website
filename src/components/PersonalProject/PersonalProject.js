@@ -79,7 +79,7 @@ const PersonalProject = () => {
                                     <Typography variant="h4" className="mb-2">
                                         {project.name}
                                     </Typography>
-                                    <Typography variant="p" className="mb-2">
+                                    <Typography variant="p" className="text-gray-600 mb-2">
                                         {project.description}
                                     </Typography>
                                 </CardBody>
