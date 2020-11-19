@@ -32,7 +32,6 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       `).then(({ errors, data }) => {
-        console.log('creating pages', data);
         let posts = data.allMdx.edges;
         /**
          * Create Post Pages

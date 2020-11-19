@@ -35,11 +35,11 @@ const OldPostLink = ({ link }) => {
 export default class BlogPage extends Component {
     render() {
         const { data, pageContext } = this.props;
-        console.log(data);
+
         const posts = data.allMdx.edges;
         const site = data.site;
         const { oldPost, newPost } = pageContext;
-        console.log(site.siteMetadata.url);
+        
         return (
             <Layout name={'Blog'} showHeader={true}>
                 <SEO

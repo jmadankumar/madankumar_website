@@ -12,7 +12,6 @@ const PostComments = loadable(() => import('../../components/PostComments'));
 export default class PostPage extends Component {
     render() {
         const { post, site } = this.props.data;
-        console.log(post);
         const disqusShortname = 'http-madankumar-js-org';
         const disqusConfig = {
             identifier: post.frontmatter.id,

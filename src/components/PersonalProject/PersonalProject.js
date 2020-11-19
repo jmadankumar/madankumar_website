@@ -57,7 +57,7 @@ const projects = [
     {
         name: 'Ultimate Quick Revision App',
         description:
-            "A mobile app for 11th and 12th students, It will help students to quickly revison of MC's quesitions",
+            "A mobile app for 11th and 12th students, It will help students to quickly revision Multiple choice questions",
         imageUrl: QuickRevisionImage,
         url: 'javascript:void(0);',
     },

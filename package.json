@@ -58,7 +58,8 @@
     "copy": "copyfiles .nojekyll ./public && copyfiles CNAME ./public",
     "deploy": "gatsby build && npm run copy && gh-pages -d public -b master -r https://github.com/jmadankumar/jmadankumar.github.io.git",
     "glist": "gh-pages --help",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "serve": "gatsby serve"
   },
   "devDependencies": {
     "copyfiles": "^2.3.0",
