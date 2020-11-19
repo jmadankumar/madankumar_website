@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ProfileImage from '../images/new_profile.webp';
+import ProfileImage from '../images/drawing.svg';
 
 const Header = ({ siteTitle }) => (
   <div className="header-bar">
@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
           className="brand-image rounded-full"
           alt="profile"
         />
-        <span className="brand-name">Madan Kumar</span>
+        <span className="brand-name uppercase tracking-tight font-semibold">Madan Kumar</span>
       </a>
     </div>
   </div>

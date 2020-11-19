@@ -8,7 +8,7 @@ const ProjectCard = ({ data }) => {
             <CardBody className="card-body">
                 <h5 className="card-title text-xl mb-2">{data.name}</h5>
                 <h6 className="card-subtitle mb-2">{data.company}</h6>
-                <p className="card-text text-muted">{data.description}</p>
+                <p className="card-text text-muted mb-2" >{data.description}</p>
                 <div className="location">
                     <FeatherIcon.MapPin size={16} className="inline-block" />
                     <span> {data.location}</span>
@@ -17,7 +17,7 @@ const ProjectCard = ({ data }) => {
                     <h5 className="text-lg mb-2">Responsibility</h5>
                     {data.roles.map((role) => {
                         return (
-                            <div className="item">
+                            <div className="item mb-2">
                                 <FeatherIcon.GitCommit
                                     size={16}
                                     className="inline-block"

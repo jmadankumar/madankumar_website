@@ -48,7 +48,7 @@ class Nav extends Component {
                 <div className="flex justify-between">
                     <a className="nav-link" href="/" className="brand">
                         <img src={ProfileImage} className="brand-image rounded-full" alt="profile" />
-                        <span className="brand-name">Madan Kumar</span>
+                        <span className="brand-name uppercase">Madan Kumar</span>
                     </a>
                     <ul className="flex justify-around flex-grow md:flex-grow-0">
                         {

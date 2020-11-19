@@ -13,8 +13,8 @@ const ProfileHeader = ({ profile }) => {
                         alt="profile"
                     />
                 </div>
-                <div className="w-full text-center text-white">
-                    <h3 className="name text-4xl">{profile.name}</h3>
+                <div className="w-full text-center text-white uppercase ">
+                    <h3 className="name text-4xl font-bold">{profile.name}</h3>
                     <h5 className="profession text-2xl">{profile.role}</h5>
                 </div>
             </div>

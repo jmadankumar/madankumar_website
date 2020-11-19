@@ -12,9 +12,9 @@ tags:
 image: ../../images/remove-duplicates-from-primitive-array-in-javascript.png
 ---
 
-### In this Article, we will see how to remove duplicates from a number array using set
+### In this Article, we will see how to remove duplicates from a number array using set.
 
-First we will declare and initialize number array which contains duplicate values
+First we will declare and initialize number array which contains duplicate values.
 
 
 ```javascript
@@ -24,16 +24,16 @@ console.log(array);//[20, 10, 20, 60, 3, 1, 10]
 
 We will use Set object to remove the duplicate values from the array. Set is a data structure which hold only unique value in it.
 
-now we will initialize a Set object using Set constructor and pass the array as a parameter
+Now we will initialize a Set object using Set constructor and pass the array as a parameter.
 
 ```javascript
 const set = new Set(array);
 console.log(set);//Set(5) {20, 10, 60, 3, 1}
 ```
 
-After passing the array to Set object. It will remove all the duplicate number from the array 
+After passing the array to Set object. It will remove all the duplicate number from the array.
 
-Now we will convert the Set object back to Array
+Now we will convert the Set object back to Array.
 
 ```javascript
 console.log(Array.from(set));//[20, 10, 60, 3, 1]

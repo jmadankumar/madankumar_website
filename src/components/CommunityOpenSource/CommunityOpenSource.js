@@ -20,6 +20,11 @@ const repos = [
         description: 'a streaming interface for archive generation',
         html_url: 'https://github.com/archiverjs/node-archiver',
     },
+    {
+        name: 'node-zip-stream',
+        description: 'a streaming zip archive generator',
+        html_url: 'https://github.com/archiverjs/node-zip-stream',
+    },
 ];
 const CommunityOpenSource = () => {
     return (

@@ -9,7 +9,7 @@ class Project extends Component {
     const { data } = this.props;
     return (
       <div className="project-card-wrapper">
-        <div className="duration mb-4">
+        <div className="duration mb-5">
           <span className="badge badge-primary">
             <span className="date">
               {format(
