@@ -69,8 +69,8 @@ const PersonalProject = () => {
                 return (
                     <div className="px-4 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 mb-8">
                         <a href={project.url} target={project.target}>
-                            <Card className="border rounded-none transition transform duration-500 ease-in-out hover:shadow hover:scale-105">
-                                <CardBody className="card-body">
+                            <Card className="border rounded-none transition transform duration-500 ease-in-out hover:shadow hover:scale-105 bg-transparent">
+                                <CardBody className="card-body bg-transparent">
                                     <img
                                         src={project.imageUrl}
                                         className="w-full mb-2 object-contain h-40 md:h-48 lg:h-64"

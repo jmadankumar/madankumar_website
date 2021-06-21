@@ -1,6 +1,6 @@
 .mk-navbar{
-    background: #ffffff;
-    border-top: 1px solid #cccccc;
+    background: #001220;
+    border-top: 1px solid #001220;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -23,7 +23,8 @@
         }
         .brand-name{
             font-size:  24px;
-            color: #0c344b;
+            font-weight: 600;
+            color: #ffffff;
             margin-left: 20px;
         }
     }
@@ -49,7 +50,7 @@
     .nav-item:hover {
         color: #0c344b;
         .nav-link{
-            color: #0c344b;
+            color: #fff;
         }
     }
 }
@@ -58,7 +59,7 @@
         top:0;
         bottom: auto;
         justify-content: center;
-        border-bottom: 1px solid #cccccc;
+        border-bottom: 1px solid #001220;
         border-top-width: 0px;
         .nav-container{
             width: 80%;

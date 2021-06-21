@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 const Card = ({ children, className, ...props }) => {
   return (
-    <div {...props} className={cx('bg-white rounded-md', className)}>
+    <div {...props} className={cx('', className)}>
       {children}
     </div>
   );

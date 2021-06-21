@@ -6,7 +6,7 @@ import * as FeatherIcon from 'react-feather';
 import Header from './header';
 import Footer from './Footer';
 import Nav from './Nav';
-import '../scss/global.scss';
+// import '../scss/global.scss';
 import './layout.css';
 // import 'prismjs/themes/prism-tomorrow.css';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import '../scss/index.scss';
+// import '../scss/index.scss';
 import SkillsByCategory from '../components/SkillsByCatergory';
 import ProfileSection from '../components/ProfileSection/ProfileSection';
 import ProfileHeader from '../components/ProfileHeader';
@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
             <div className="portfolio-wrapper">
                 <ProfileHeader profile={profile} />
                 <div className="content">
-                    <Card>
+                    <Card className="bg">
                         <CardBody className="px-6 md:px-16">
                             <ProfileSection title="Biography">
                                 <ProfileBiography />

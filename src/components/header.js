@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
           className="brand-image rounded-full"
           alt="profile"
         />
-        <span className="brand-name uppercase tracking-tight font-semibold">Madan Kumar</span>
+        <span className="brand-name uppercase tracking-tight font-semibold text-white">Madan Kumar</span>
       </a>
     </div>
   </div>

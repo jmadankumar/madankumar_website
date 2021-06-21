@@ -1,13 +1,18 @@
-import React from 'react'
+import React from 'react';
 import Typography from '../common/Typography';
 
 const ProfileSection = ({ title, children }) => {
-  return (
-    <section className="section-holder py-5">
-      <Typography variant="h2" className="mb-5 text-center font-bold tracking-wider underline text-blue-900">{title}</Typography>
-      <div className="section-content">{children}</div>
-    </section>
-  )
-}
+    return (
+        <section className="py-5 flex flex-col items-center">
+            <Typography
+                variant="h2"
+                className="mb-12 text-center font-bold tracking-wider text-white"
+            >
+                {title}
+            </Typography>
+            <div className="text-white w-full md:w-2/3">{children}</div>
+        </section>
+    );
+};
 
-export default ProfileSection
+export default ProfileSection;

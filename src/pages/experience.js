@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Project from '../components/Project';
-import '../scss/experience.scss';
+// import '../scss/experience.scss';
 
 const ExperiencePage = ({ data }) => {
   let projects = data.allTcsYaml.edges.map((edge) => {
