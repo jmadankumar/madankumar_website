@@ -1,0 +1,56 @@
+.light-theme {
+  --bg-color: #f2efe4;
+  --text-color: #111;
+  --brand-name-color: #111;
+  --section-heading: #111;
+  --side-menu-color: #eeeadb;
+  --os-card-color: #fff;
+}
+
+.dark-theme {
+  --bg-color: #001220;
+  --text-color: #fff;
+  --brand-name-color: #fff;
+  --section-heading: #fff;
+  --side-menu-color: #002233;
+  --os-card-color: #002233;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper,
+.page-container {
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * If you already use line highlighting
+ */
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding-left: 2.8em;
+}
+
+/**
+   * If you only want to use line numbering
+   */
+
+.gatsby-highlight {
+  background-color: #1d1f21;
+  border-radius: 0.3em;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding: 0 1em 0 1em;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+.gatsby-highlight pre[class*='language-'].line-numbers.line-numbers-rows {
+  padding-left: 1em;
+}

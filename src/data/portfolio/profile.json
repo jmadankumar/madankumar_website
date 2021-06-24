@@ -78,9 +78,14 @@
         {
           "title": "Spring Boot",
           "badge": "https://img.shields.io/badge/-SpringBoot-6DB33F?style=for-the-badge&logo=Spring&logoColor=ffffff"
-        }, {
+        },
+        {
           "title": "NestJS",
           "badge": "https://img.shields.io/badge/-NestJS-red?style=for-the-badge&logo=NestJS&logoColor=ffffff"
+        },
+        {
+          "title": "FastifyJS",
+          "badge": "https://img.shields.io/badge/-fastifyjs-red?style=for-the-badge&logo=fastifyjs&logoColor=ffffff"
         }
       ]
     },
@@ -192,7 +197,8 @@
         {
           "title": "Digital Ocean",
           "badge": "https://img.shields.io/badge/-Digital%20Ocean-1a202c?style=for-the-badge&logo=DigitalOcean"
-        },{
+        },
+        {
           "title": "Netlify",
           "badge": "https://img.shields.io/badge/-Netlify-00CEBF?style=for-the-badge&logo=Netlify&logoColor=ffffff"
         }

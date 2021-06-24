@@ -4,6 +4,38 @@
   description: "Full Stack Developer"
   duration: 
     endDate: "present"
+    startDate: "2021-01-25"
+  location: "Mumbai, India"
+  name: "Convo Sign Live (VRS)"
+  roles: 
+    - "Requirement Analysis"
+    - "Task planning"
+    - "Code review"
+    - "Git Repo maintenance"
+    - "Impact Analysis"
+    - "Full Stack Development"
+    - "Release planning and implemention"
+    - "Maintenance and Delivery of the product"
+  technologies: 
+    - "React"
+    - "Typescript"
+    - "NodeJS"
+    - "WebRTC"
+    - "Websocket"
+    - "Web Media API"
+    - "Notification API"
+    - "NPM"
+    - "Yarn"
+    - "AWS - S3, SNS, Cloudfront"
+    - "Git"
+    - Sentry
+    - Material UI
+    - Webpack
+-
+  company: "Larsen & Toubro Infotech Limited"
+  description: "Full Stack Developer"
+  duration: 
+    endDate: "2021-01-24"
     startDate: "2020-02-01"
   location: "Mumbai, India"
   name: "Convo Link (VRS)"

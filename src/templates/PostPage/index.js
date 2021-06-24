@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import SEO from '../../components/seo';
 import Post from '../../components/Post';
-import './post.scss';
 import loadable from '@loadable/component';
 import BreadCrumb from '../../components/common/BreadCrumb';
+import './post.scss';
+
 
 const PostComments = loadable(() => import('../../components/PostComments'));
 

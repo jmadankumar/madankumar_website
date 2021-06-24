@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { graphql, Link } from 'gatsby';
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import * as FeatherIcon from 'react-feather';
 import SEO from '../../components/seo';
 import Post from '../../components/Post';
