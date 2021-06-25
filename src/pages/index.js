@@ -7,7 +7,6 @@ import ProfileSection from '../components/ProfileSection/ProfileSection';
 import ProfileHeader from '../components/ProfileHeader';
 import ProfileBiography from '../components/ProfileBiography';
 import PersonalOpenSource from '../components/PersonalOpenSource';
-import Card, { CardBody } from '../components/common/Card';
 import PersonalProject from '../components/PersonalProject';
 import CommunityOpenSource from '../components/CommunityOpenSource';
 
@@ -22,34 +21,23 @@ const IndexPage = ({ data }) => {
       <div className="portfolio-wrapper">
         <ProfileHeader profile={profile} />
         <div className="content">
-          <Card>
-            <CardBody className="px-6 md:px-16">
-              <ProfileSection title="Biography">
-                <ProfileBiography />
-              </ProfileSection>
-              {/* <ProfileSection title="Company">
-                                {profile.company}
-                            </ProfileSection>
-                            <ProfileSection title="Country">
-                                {profile.country}
-                            </ProfileSection> */}
-              <ProfileSection title="Skills">
-                <SkillsByCategory data={profile.skillsByCategory} />
-              </ProfileSection>
-              <ProfileSection title="Personal projects">
-                <PersonalProject />
-              </ProfileSection>
-              <ProfileSection title="Community Open Source contribution">
-                <CommunityOpenSource />
-              </ProfileSection>
-              <ProfileSection title="Personal Open Source contribution">
-                <PersonalOpenSource />
-              </ProfileSection>
-            </CardBody>
-          </Card>
+          <ProfileSection title="Biography">
+            <ProfileBiography />
+          </ProfileSection>
+          <ProfileSection title="Skills">
+            <SkillsByCategory data={profile.skillsByCategory} />
+          </ProfileSection>
+          <ProfileSection title="Personal projects">
+            <PersonalProject />
+          </ProfileSection>
+          <ProfileSection title="Community Open Source contribution">
+            <CommunityOpenSource />
+          </ProfileSection>
+          <ProfileSection title="Personal Open Source contribution">
+            <PersonalOpenSource />
+          </ProfileSection>
         </div>
       </div>
-      <div></div>
     </Layout>
   );
 };

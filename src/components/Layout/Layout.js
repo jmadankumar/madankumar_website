@@ -13,7 +13,10 @@ const StyledLayout = styled.div`
     background-color: var(--bg-color);
     color: var(--text-color);
     margin-top: 60px;
-    padding: 1rem 2rem;
+  }
+  .scroll-up-btn {
+    background-color: var(--scroll-top-btn-bg-color);
+    color: var(--scroll-top-btn-text-color);
   }
 `;
 
@@ -34,7 +37,7 @@ const Layout = ({ children, name, showHeader }) => {
     <StyledLayout className={`${theme}-theme`}>
       {showHeader && <Header siteTitle={data.site.siteMetadata.title} />}
 
-      <div className="main-content">{children}</div>
+      <div className="main-content px-2 md:px-8 py-4 md:py-8">{children}</div>
       <Footer />
       <ScrollUp
         startPosition={0}
@@ -46,7 +49,7 @@ const Layout = ({ children, name, showHeader }) => {
           bottom: '60px',
         }}
       >
-        <button className="bg-purple-500 p-2 rounded-full">
+        <button className="scroll-up-btn p-2 rounded-full">
           <FeatherIcon.ArrowUp size={24} className="text-white" />
         </button>
       </ScrollUp>

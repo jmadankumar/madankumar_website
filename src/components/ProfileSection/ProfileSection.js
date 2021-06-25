@@ -10,7 +10,7 @@ const ProfileSection = ({ title, children }) => {
             >
                 {title}
             </Typography>
-            <div className="w-full md:w-2/3">{children}</div>
+            <div className="w-full lg:w-3/4 xl:4/6">{children}</div>
         </section>
     );
 };
