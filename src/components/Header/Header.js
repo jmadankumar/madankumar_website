@@ -74,10 +74,10 @@ const StyledHeader = styled.div`
   }
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <StyledHeader>
     <div className="header-container flex justify-between items-center px-4 md:px-8 py-2">
-      <a className="nav-link " href="/" className="brand flex items-center">
+      <a href="/" className="nav-link brand flex items-center">
         <img
           src={ProfileImage}
           className="brand-image rounded-full"

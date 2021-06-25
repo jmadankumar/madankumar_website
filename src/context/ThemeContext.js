@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 
 const ICON_SIZE = 30;
 
@@ -24,17 +24,19 @@ export const ThemeProvider = ({ children }) => {
   );
   const [isNavOpen, setNavOpen] = useState(false);
 
-  const openNavMenu = () => {
+  const openNavMenu = useCallback(() => {
     setNavOpen(true);
-  };
-  const closeNavMenu = () => {
-    setNavOpen(false);
-  };
+  }, []);
 
-  const changeTheme = (theme) => {
+  const closeNavMenu = useCallback(() => {
+    setNavOpen(false);
+  }, []);
+
+  const changeTheme = useCallback((theme) => {
     localStorage.setItem(THEME_KEY, theme);
     setTheme(theme);
-  };
+  }, []);
+  
   return (
     <ThemeContext.Provider
       value={{

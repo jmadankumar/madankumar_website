@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import Project from '../components/Project';
 
 const ExperiencePage = ({ data }) => {
-  let projects = data.allTcsYaml.edges.map((edge) => {
+  const projects = data.allTcsYaml.edges.map((edge) => {
     return edge.node;
   });
 

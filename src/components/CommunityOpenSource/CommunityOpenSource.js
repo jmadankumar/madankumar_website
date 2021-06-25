@@ -39,7 +39,7 @@ const CommunityOpenSource = () => {
       {repos.map((repo) => {
         return (
           <div className="px-4 w-full sm:w-1/2 md:w-1/2 2xl:w-1/3 mb-8">
-            <a href={repo.html_url} target="_blank">
+            <a href={repo.html_url} target="_blank" rel="noreferrer noopener">
               <Card className="card transition transform duration-500 ease-in-out hover:shadow hover:scale-105">
                 <CardBody className="card-body">
                   <Typography variant="h4" className="mb-2">

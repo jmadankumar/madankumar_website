@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import * as FeatherIcon from 'react-feather';
-import ProfileImage from '../../images/drawing.svg';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { useThemeContext } from '../../context/ThemeContext';
@@ -88,7 +87,12 @@ const NavItem = ({ name, icon: Icon, href, isActive, isExternal, onClick }) => {
       onClick={onClick}
     >
       {isExternal ? (
-        <a className={navLinkClassName} href={href} target="_blank">
+        <a
+          className={navLinkClassName}
+          href={href}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           {content}
         </a>
       ) : (
@@ -154,18 +158,18 @@ const Nav = ({ currentLinkName }) => {
     return linkName === currentLinkName;
   };
 
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     if (window.innerWidth >= 768 && isNavOpen) {
       closeNavMenu();
     }
-  };
+  }, [closeNavMenu, isNavOpen]);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [isNavOpen]);
+  }, [handleResize]);
 
   return (
     <StyledNav className={cx({ open: isNavOpen })}>

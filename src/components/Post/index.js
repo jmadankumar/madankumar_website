@@ -75,10 +75,10 @@ const Post = ({
                 </MDXProvider>
               </div>
             )}
-            <p className="mb-4">
-              Posted By
+            <p className="flex flex-wrap mb-4">
+              <span>Posted By</span>
               <PostAuthor author={author} showIcon={false} />
-              On
+              <span className="ml-1">On</span>
               <PostDate date={date} showIcon={false} />
             </p>
             <PostTags tags={tags ?? []} className="mb-4" />

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { format, parse } from 'date-fns';
 import * as FeatherIcon from 'react-feather';
 import { DATE_FORMAT } from '../../config/constants';
