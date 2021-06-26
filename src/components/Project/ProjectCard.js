@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import * as FeatherIcon from 'react-feather';
 import Card, { CardBody } from '../common/Card';
+import Tag from '../common/Tag';
 
 const StyledProjectCard = styled(Card)`
   .card-subtitle {
@@ -33,17 +34,11 @@ const StyledProjectCard = styled(Card)`
   .technology {
     border-bottom: none;
   }
-  .tag {
-    background-color: #667eea;
-    background-color: var(--tag-color);
-    color: #fff;
-    color: var(--tag-text-color);
-  }
 `;
 const ProjectCard = ({ data }) => {
   return (
     <StyledProjectCard className="card">
-      <CardBody className="card-body">
+      <CardBody className="card-body mb-12">
         <h5 className="card-title text-xl mb-2">{data.name}</h5>
         <h6 className="card-subtitle mb-2">{data.company}</h6>
         <p className="card-text text-muted mb-2">{data.description}</p>
@@ -66,11 +61,7 @@ const ProjectCard = ({ data }) => {
           <h5 className="text-lg mb-2">Technologies</h5>
           <div className="flex flex-wrap">
             {data.technologies.map((technology) => {
-              return (
-                <span className="tag py-1 px-3 mr-2 mb-2 rounded-md text-xs md:text-sm">
-                  {technology}
-                </span>
-              );
+              return <Tag>{technology}</Tag>;
             })}
           </div>
         </div>

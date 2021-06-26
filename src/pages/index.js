@@ -5,10 +5,10 @@ import SEO from '../components/seo';
 import SkillsByCategory from '../components/SkillsByCatergory';
 import ProfileSection from '../components/ProfileSection/ProfileSection';
 import ProfileHeader from '../components/ProfileHeader';
-import ProfileBiography from '../components/ProfileBiography';
 import PersonalOpenSource from '../components/PersonalOpenSource';
 import PersonalProject from '../components/PersonalProject';
 import CommunityOpenSource from '../components/CommunityOpenSource';
+import Certifications from '../components/Certifications';
 
 const IndexPage = ({ data }) => {
   const profile = data.allPortfolioJson.edges[0].node;
@@ -18,14 +18,14 @@ const IndexPage = ({ data }) => {
         title="Portfolio"
         keywords={[`madankumar`, `portfolio`, `full stack developer`]}
       />
-      <div className="portfolio-wrapper">
+      <div className="portfolio-wrapper flex flex-col items-center">
         <ProfileHeader profile={profile} />
-        <div className="content">
-          <ProfileSection title="Biography">
-            <ProfileBiography />
-          </ProfileSection>
+        <div className="content w-full lg:w-3/4 xl:4/6">
           <ProfileSection title="Skills">
             <SkillsByCategory data={profile.skillsByCategory} />
+          </ProfileSection>
+          <ProfileSection title="Certifications">
+            <Certifications />
           </ProfileSection>
           <ProfileSection title="Personal projects">
             <PersonalProject />

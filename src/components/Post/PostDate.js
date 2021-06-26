@@ -8,7 +8,7 @@ const StyledPostDate = styled.div``;
 
 const PostDate = ({ date, showIcon }) => {
   return (
-    <StyledPostDate className="date" className="ml-1">
+    <StyledPostDate className="date ml-1">
       {showIcon && <FeatherIcon.Clock size={constants.ICON_SIZE} />}
       {date}
     </StyledPostDate>

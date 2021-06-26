@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Badge from '../common/Badge';
+import Tag from '../common/Tag';
 import cx from 'classnames';
 
 const PostTags = ({ tags, className }) => {
   return (
     <div className={cx('flex flex-wrap', className)}>
       {tags.map((tag) => (
-        <Badge key={tag}>{tag}</Badge>
+        <Tag key={tag}>{tag}</Tag>
       ))}
     </div>
   );

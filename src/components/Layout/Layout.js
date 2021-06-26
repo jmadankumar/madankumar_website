@@ -9,10 +9,12 @@ import Footer from '../Footer';
 import { useThemeContext } from '../../context/ThemeContext';
 
 const StyledLayout = styled.div`
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
   .main-content {
-    background-color: var(--bg-color);
-    color: var(--text-color);
     margin-top: 60px;
+    width: 100%;
   }
   .scroll-up-btn {
     background-color: var(--scroll-top-btn-bg-color);
@@ -34,10 +36,10 @@ const Layout = ({ children, name, showHeader }) => {
   `);
 
   return (
-    <StyledLayout className={`${theme}-theme`}>
+    <StyledLayout className={`page-container ${theme}-theme`}>
       {showHeader && <Header siteTitle={data.site.siteMetadata.title} />}
 
-      <div className="main-content px-2 md:px-8 py-4 md:py-8">{children}</div>
+      <div className="main-content px-4 md:px-8 py-4 md:py-8">{children}</div>
       <Footer />
       <ScrollUp
         startPosition={0}
@@ -49,7 +51,10 @@ const Layout = ({ children, name, showHeader }) => {
           bottom: '60px',
         }}
       >
-        <button className="scroll-up-btn p-2 rounded-full">
+        <button
+          className="scroll-up-btn p-2 rounded-full"
+          aria-label="scroll to top button"
+        >
           <FeatherIcon.ArrowUp size={24} className="text-white" />
         </button>
       </ScrollUp>

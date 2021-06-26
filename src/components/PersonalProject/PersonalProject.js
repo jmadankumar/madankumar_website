@@ -11,17 +11,19 @@ import cx from 'classnames';
 import styled from '@emotion/styled';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import useImage from '../../hooks/useImage';
+import Tag from '../common/Tag';
 
 const projects = [
   {
     name: 'MeetX video conferencing webapp',
     description:
-      'MeetX web app is a clone of Zoom app. It is created using React, WebRTC, Typescript, Nodejs and Websocket',
+      'MeetX web app is a clone of Zoom app. It is created using React, WebRTC, Typescript, Nodejs and Websocket.',
     imageUrl: MeetxImage,
     imageFileName: '/meetx_web.png',
     url: 'https://youtu.be/gu-0vsyqcgA',
     githubUrl: 'https://github.com/jmadankumar/video-conferencing-app',
     target: '_blank',
+    tags: ['React', 'WebRTC', 'Typescript', 'Websocket', 'Nodejs'],
   },
   {
     name: 'MeetX video conferencing mobile app',
@@ -32,15 +34,17 @@ const projects = [
     url: 'https://youtu.be/Yi618h_17fA',
     githubUrl: 'https://github.com/jmadankumar/video-conferencing-mobile',
     target: '_blank',
+    tags: ['Flutter', 'WebRTC', 'Android', 'Flutter WebRTC', 'Websocket'],
   },
   {
     name: 'SDP analyser',
-    description: 'Session description protocol analyser',
+    description: 'A web app analyse Session description protocol',
     imageUrl: SdpAnalyserImage,
     imageFileName: '/sdp_analyser.png',
     url: 'https://sdp-analyser.madankumar.me/',
     githubUrl: 'https://github.com/jmadankumar/sdp-analyser',
     target: '_blank',
+    tags: ['React', 'Gatsby', 'SDP', 'Json Viewer'],
   },
   {
     name: 'Algorithm visualizer',
@@ -50,25 +54,37 @@ const projects = [
     url: 'https://ds-algorithm-visualizer.github.io/',
     githubUrl: 'https://github.com/jmadankumar/algorithm-visualizer',
     target: '_blank',
+    tags: ['React', 'Gatsby', 'Material UI', 'Algorithms', 'Github Pages'],
   },
   {
     name: 'Portal IOBS',
     description:
-      'Branding activity tracking portal for India one brand services created using  ReactJS, NodeJS, TypeORM, MySQL.AWS EC2 and AWS Amplify',
+      'Branding activity tracking portal for India one brand services.It created using  ReactJS, NodeJS, TypeORM, MySQL.AWS EC2 and AWS Amplify',
     imageUrl: PortalIobsImage,
     imageFileName: '/portal_iobs.png',
     githubUrl: '',
     url: '',
+    tags: [
+      'React',
+      'ExpressJs',
+      'NodeJs',
+      'Material UI',
+      'MySQL',
+      'AWS',
+      'Axios',
+      'JWT',
+    ],
   },
   {
     name: 'IOBS website',
     description:
-      'India one brand services website created using Gatsby, ReactJS and AWS Amplify',
+      'India one brand services website. It is created using Gatsby, ReactJS and AWS Amplify',
     imageUrl: IobsImage,
     imageFileName: '/iobs.png',
     url: 'http://iobs.in/',
     githubUrl: '',
     target: '_blank',
+    tags: ['React', 'Gatsby', 'Tailwindcss', 'AWS'],
   },
   {
     name: 'Ultimate Quick Revision App',
@@ -78,6 +94,7 @@ const projects = [
     imageFileName: '/ultimate_quick_revision.png',
     githubUrl: '',
     url: '',
+    tags: ['Android', 'SQL lite', 'Education'],
   },
 ];
 
@@ -116,7 +133,7 @@ const ProjectDetail = ({ project, reverseLayout }) => {
       <div className="flex flex-wrap">
         <div
           className={cx(
-            'image-container w-full md:w-2/4 lg:w-2/4 xl:w-5/12 mb-5 md:mb-0 flex justify-center',
+            'image-container w-full md:w-2/4 lg:w-2/4 xl:w-5/12 mb-5 md:mb-0 md:p-4 flex justify-center',
             {
               'md:order-last': reverseLayout,
             }
@@ -134,11 +151,16 @@ const ProjectDetail = ({ project, reverseLayout }) => {
             { 'md:text-right md:items-end': !reverseLayout }
           )}
         >
-          <div className="title text-2xl md:text-4xl font-bold mb-5">
+          <div className="title text-2xl md:text-3xl font-bold mb-5">
             {project.name}
           </div>
-          <div className="description text-base md:text-xl mb-4">
+          <div className="description text-base md:text-lg mb-4">
             {project.description}
+          </div>
+          <div className="flex flex-wrap mb-4">
+            {project.tags.map((tag) => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
           </div>
           <div className="flex">
             {project.url && (
@@ -146,8 +168,10 @@ const ProjectDetail = ({ project, reverseLayout }) => {
                 href={project.url}
                 target={project.target}
                 className="project-link flex text-2xl font-bold"
+                rel="noreferrer noopener"
               >
                 <FeatherIcon.ExternalLink />
+                <span className="hidden">External Link</span>
               </a>
             )}
             {project.githubUrl && (
@@ -155,8 +179,10 @@ const ProjectDetail = ({ project, reverseLayout }) => {
                 href={project.githubUrl}
                 target={project.target}
                 className="project-link flex text-2xl font-bold ml-4"
+                rel="noreferrer noopener"
               >
                 <FeatherIcon.GitHub />
+                <span className="hidden">Github Link</span>
               </a>
             )}
           </div>
@@ -176,6 +202,7 @@ const PersonalProject = () => {
           <ProjectDetail
             project={project}
             reverseLayout={index % 2 === 1}
+            key={project.name}
           />
         );
       })}

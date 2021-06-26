@@ -35,16 +35,11 @@ const socialConnects = [
 ];
 
 const StyledFooter = styled.footer`
-  background-color: #353a3d;
-  background: linear-gradient(
-    160deg,
-    rgb(12, 52, 75) 12.5%,
-    rgb(41, 81, 102) 85%
-  );
-  color: #ffffff;
   text-align: center;
   padding: 20px;
   margin-bottom: 55px;
+  border-top: 1px solid #002233;
+
   div {
     padding: 5px;
   }
@@ -55,7 +50,6 @@ const StyledFooter = styled.footer`
   }
   .social-links .social-media {
     margin: 5px;
-    color: #ffffff;
   }
   @media (min-width: 768px) {
     & {

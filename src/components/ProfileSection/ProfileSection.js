@@ -1,23 +1,22 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import Typography from '../common/Typography';
 
 const StyledProfileSection = styled.section`
-  .section-heading {
+  .section-heading span {
     color: var(--profile-section-heading-text-color);
+    border-bottom: 4px solid var(--profile-section-heading-border-color);
   }
 `;
 
 const ProfileSection = ({ title, children }) => {
   return (
-    <StyledProfileSection className="py-5 flex flex-col items-center">
-      <Typography
-        variant="h2"
-        className="section-heading mb-12 text-center font-bold tracking-wider"
-      >
-        {title}
-      </Typography>
-      <div className="w-full lg:w-3/4 xl:4/6">{children}</div>
+    <StyledProfileSection className="flex flex-col items-center py-5 mb-12">
+      <div className="section-heading mb-8 md:mb-12 w-full">
+        <span className="text-3xl font-medium  text-center font-bold tracking-wider">
+          {title}
+        </span>
+      </div>
+      <div className="w-full">{children}</div>
     </StyledProfileSection>
   );
 };

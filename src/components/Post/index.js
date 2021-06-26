@@ -53,6 +53,7 @@ const Post = ({
   if (process.env.NODE_ENV === 'development') {
     url = 'http://localhost:8000';
   }
+
   return (
     <Wrapper>
       <Link href={to}>
@@ -81,7 +82,7 @@ const Post = ({
               <span className="ml-1">On</span>
               <PostDate date={date} showIcon={false} />
             </p>
-            <PostTags tags={tags ?? []} className="mb-4" />
+            <PostTags tags={tags ?? []} className="mb-4" key="post-tags"/>
 
             {isPreview && (
               <Typography variant="h6" className="comments">

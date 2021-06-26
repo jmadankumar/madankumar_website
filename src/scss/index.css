@@ -7,16 +7,18 @@
   --os-card-color: #fff;
   --tag-color: #8d6e63;
   --tag-text-color: #fff;
-  --profile-section-heading-text-color: #bf360c;
+  --profile-section-heading-text-color: #3e2723;
+  --profile-section-heading-border-color: #f44336;
   --experience-duration-bg-color: #3e2723;
   --experience-duration-text-color: #fff;
   --experience-company-bg-color: #d7ccc8;
   --experience-company-text-color: #795548;
   --scroll-top-btn-bg-color: #3e2723;
   --scroll-top-btn-text-color: #fff;
-  --project-title-text-color: #3e2723;
+  --project-title-text-color: #070606;
   --project-description-text-color: #999da4;
-  --project-link-text-color: #3e2723;
+  --project-link-text-color: #f44336;
+  --github-project-description-text-color: #999da4;
 }
 
 .dark-theme {
@@ -29,6 +31,7 @@
   --tag-color: #297ea6;
   --tag-text-color: #fff;
   --profile-section-heading-text-color: #fff;
+  --profile-section-heading-border-color: #48c4ff;
   --experience-duration-bg-color: #fbae3c;
   --experience-duration-text-color: rgb(0, 0, 0);
   --experience-company-bg-color: #c2e7f8;
@@ -37,7 +40,8 @@
   --scroll-top-btn-text-color: #fff;
   --project-title-text-color: #fff;
   --project-description-text-color: #999da4;
-  --project-link-text-color: #8b7af4;
+  --project-link-text-color: #48c4ff;
+  --github-project-description-text-color: #999da4;
 }
 html {
   scroll-behavior: smooth;
@@ -49,6 +53,10 @@ body,
 .page-container {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+.page-container{
+  overflow-y: auto;
 }
 
 /**

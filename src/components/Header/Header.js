@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ProfileImage from '../../images/drawing.svg';
 import Nav from '../Nav';
 import { useThemeContext } from '../../context/ThemeContext';
 import * as FeatherIcon from 'react-feather';
 import cx from 'classnames';
+import useImage from '../../hooks/useImage';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const ThemeButton = () => {
   const { theme, changeTheme, ICON_SIZE } = useThemeContext();
@@ -19,6 +20,7 @@ const ThemeButton = () => {
       type="button"
       className="text-2xl theme-btn outline-none"
       onClick={handleThemeClick}
+      aria-label="Theme change button"
     >
       {theme === 'light' ? (
         <FeatherIcon.Moon size={ICON_SIZE} />
@@ -37,6 +39,7 @@ const MenuButton = ({ className }) => {
       type="button"
       className={cx('text-2xl menu-btn ml-4 outline-none', className)}
       onClick={openNavMenu}
+      aria-label="Menu button"
     >
       <FeatherIcon.Menu size={ICON_SIZE} />
     </button>
@@ -74,27 +77,30 @@ const StyledHeader = styled.div`
   }
 `;
 
-const Header = () => (
-  <StyledHeader>
-    <div className="header-container flex justify-between items-center px-4 md:px-8 py-2">
-      <a href="/" className="nav-link brand flex items-center">
-        <img
-          src={ProfileImage}
-          className="brand-image rounded-full"
-          alt="profile"
-        />
-        <span className="brand-name font-bold text-xl sm:text-2xl md:text-3xl uppercase ml-3">
-          Madan Kumar
-        </span>
-      </a>
-      <div className="nav-container flex">
-        <Nav />
-        <ThemeButton />
-        <MenuButton className="menu-btn" />
+const Header = () => {
+  const image = useImage('logo.png');
+  return (
+    <StyledHeader>
+      <div className="header-container flex justify-between items-center px-4 md:px-8 py-2">
+        <a href="/" className="nav-link brand flex items-center" rel="noreferrer noopener">
+          <GatsbyImage
+            image={image}
+            className="brand-image rounded-full"
+            alt="profile"
+          />
+          <span className="brand-name font-bold text-xl sm:text-2xl md:text-3xl uppercase ml-3">
+            Madan Kumar
+          </span>
+        </a>
+        <div className="nav-container flex">
+          <Nav />
+          <ThemeButton />
+          <MenuButton className="menu-btn" />
+        </div>
       </div>
-    </div>
-  </StyledHeader>
-);
+    </StyledHeader>
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
